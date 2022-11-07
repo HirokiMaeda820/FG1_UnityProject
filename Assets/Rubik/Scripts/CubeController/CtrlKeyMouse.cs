@@ -20,14 +20,18 @@ public class CtrlKeyMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cmode.mode == 0 && !CustomAlgoBbleAnim.GetBool("isOpen")) {
+        if (cmode.mode == 0 && !CustomAlgoBbleAnim.GetBool("isOpen"))
+        {
             // Check for mouse input
-            if (Input.GetMouseButtonDown(0) && !crb.isHittingUI()) {
+            if (Input.GetMouseButtonDown(0) && !crb.isHittingUI())
+            {
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                if (Physics.Raycast(ray, out hit)) {
-                    switch (hit.transform.name) {
+                if (Physics.Raycast(ray, out hit))
+                {
+                    switch (hit.transform.name)
+                    {
                         case "Arrow_F1":
                             cubemover.move("L_B");
                             break;
@@ -120,18 +124,6 @@ public class CtrlKeyMouse : MonoBehaviour
                             break;
                     }
                 }
-            } else if (Input.GetKeyDown(KeyCode.A)) {
-                cubemover.move("A_UL");
-            } else if (Input.GetKeyDown(KeyCode.D)) {
-                cubemover.move("A_UR");
-            } else if (Input.GetKeyDown(KeyCode.W)) {
-                cubemover.move("A_RB");
-            } else if (Input.GetKeyDown(KeyCode.S)) {
-                cubemover.move("A_RF");
-            } else if (Input.GetKeyDown(KeyCode.Q)) {
-                cubemover.move("A_FL");
-            } else if (Input.GetKeyDown(KeyCode.E)) {
-                cubemover.move("A_FR");
             }
         }
     }
