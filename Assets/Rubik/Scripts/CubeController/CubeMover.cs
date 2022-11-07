@@ -9,7 +9,7 @@ public class CubeMover : MonoBehaviour
     public Transform rootCube;
     public Text text;
     public CubeStatus cubeStatus;
-    public ControlTimer controlTimer;
+   // public ControlTimer controlTimer;
     public bool isLocked;
     public AudioClip audioFinished;
     public AudioClip[] audioRot;
@@ -18,7 +18,8 @@ public class CubeMover : MonoBehaviour
     Vector3 rotation;
     float rotation_sum;
     int speedMode;
-    List<float> speeds;
+    //List<float> speeds;
+    float speed = 3.2f;
     Transform root;
     bool shouldDestroy;
 
@@ -27,7 +28,8 @@ public class CubeMover : MonoBehaviour
     {
         root = null;
         speedMode = 2;
-        speeds = new List<float>(new float[] { 0.8f, 1.6f, 3.2f, 6.4f, 12.8f, 25.6f, 51.2f });
+        //speeds = new List<float>(new float[] {3.2f });
+
         rotation_sum = 0;
         audioSource = transform.GetComponent<AudioSource>();
         audioSource.loop = false; // for audio looping
@@ -74,15 +76,15 @@ public class CubeMover : MonoBehaviour
                     cleanRoot();
                     string status = cubeStatus.GetStatus();
                     //print(status);
-                    if (cubeStatus.isFinished(status)) {
-                        if (!controlTimer.readyToggle.isOn) {
-                            controlTimer.readyToggle.isOn = true;
-                            controlTimer.stopTimer();
-                            audioSource.clip = audioFinished;
-                            audioSource.volume = 1.0f;
-                            audioSource.Play();
-                        }
-                    }
+                    //if (cubeStatus.isFinished(status)) {
+                    //    if (!controlTimer.readyToggle.isOn) {
+                    //        controlTimer.readyToggle.isOn = true;
+                    //        controlTimer.stopTimer();
+                    //        audioSource.clip = audioFinished;
+                    //        audioSource.volume = 1.0f;
+                    //        audioSource.Play();
+                    //    }
+                    //}
                 }
             }
         }
@@ -99,7 +101,7 @@ public class CubeMover : MonoBehaviour
             foreach (Transform t in ts) {
                 t.SetParent(root);
             }
-            rotation = axis * _orientation * speeds[speedMode];
+            rotation = axis * _orientation * speed;
         }
     }
 
@@ -138,11 +140,11 @@ public class CubeMover : MonoBehaviour
         return result;
     }
 
-    public void updateRotSpeedText() {
-        speedMode += 1;
-        if (speedMode >= speeds.Count) speedMode = 0;
-        text.text = "Rotation Speed: " + ((int)(speeds[speedMode] * 10)).ToString();
-    }
+    //public void updateRotSpeedText() {
+    //    speedMode += 1;
+    //    if (speedMode >= speeds.Count) speedMode = 0;
+    //    text.text = "Rotation Speed: " + ((int)(speeds[speedMode] * 10)).ToString();
+    //}
 
     public bool isAvailable() {
         if (root == null && shouldDestroy == false) {

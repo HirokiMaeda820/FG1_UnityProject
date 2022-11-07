@@ -3,25 +3,31 @@ using Cinemachine;
 
 public class CameraSwitcher : MonoBehaviour
 {
-    [SerializeField] CinemachineVirtualCameraBase _mainCamera;
-    [SerializeField] CinemachineVirtualCameraBase _subCamera;
+    [SerializeField] CinemachineVirtualCameraBase _upCamera;
+    [SerializeField] CinemachineVirtualCameraBase _sideCamera;
 
-    bool changeCamera = false;//false:main true:sub
+    [SerializeField] CinemachineVirtualCameraBase _selectCamera;
+
+    private void Start()
+    {
+        _upCamera.MoveToTopOfPrioritySubqueue();
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (!Input.GetKey(KeyCode.Tab))
         {
-            changeCamera = !changeCamera;
+            _upCamera.MoveToTopOfPrioritySubqueue();
+        }
+        else if(!Input.GetKey(KeyCode.Space))
+        {
+            _sideCamera.MoveToTopOfPrioritySubqueue();
         }
 
-        if (changeCamera)
+
+        if (Input.GetKey(KeyCode.Space))
         {
-            _mainCamera.MoveToTopOfPrioritySubqueue();
-        }
-        else
-        {
-            _subCamera.MoveToTopOfPrioritySubqueue();
+            _selectCamera.MoveToTopOfPrioritySubqueue();
         }
     }
 }
