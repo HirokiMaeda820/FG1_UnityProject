@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class focusRotate : MonoBehaviour
 {
-    public GameObject Object;
-    public Vector2 rotationSpeed;
+    public GameObject Object;　//フォーカスするオブジェクト
+    public Vector2 rotationSpeed; 
     public bool reverse;
 
-    private GameObject Camera;//
+    //private GameObject Camera;//
     private Vector2 lastMousePosition;
 
     void Start()
     {
         //Camera = Camera.main;
-        Camera = GameObject.Find("CameraSide");
+       // Camera = GameObject.Find("CameraSide");
     }
 
     void Update()
     {
-        if (!Input.GetKey(KeyCode.Tab)) return;
+        // if (!Input.GetKey(KeyCode.Tab)) return;
+       
+        //アクティブな時しか動かないようにしたいね
+
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -41,8 +44,8 @@ public class focusRotate : MonoBehaviour
                 newAngle.x = x * rotationSpeed.x;
                 newAngle.y = y * rotationSpeed.y;
 
-                Camera.transform.RotateAround(Object.transform.position, Vector3.up, newAngle.x);
-                Camera.transform.RotateAround(Object.transform.position, transform.right, newAngle.y);
+                this.transform.RotateAround(Object.transform.position, Vector3.up, newAngle.x);
+                this.transform.RotateAround(Object.transform.position, transform.right, newAngle.y);
                 lastMousePosition = Input.mousePosition;
             }
             else
@@ -59,8 +62,8 @@ public class focusRotate : MonoBehaviour
                 newAngle.x = x * rotationSpeed.x;
                 newAngle.y = y * rotationSpeed.y;
 
-                Camera.transform.RotateAround(Object.transform.position, Vector3.up, newAngle.x);
-                Camera.transform.RotateAround(Object.transform.position, transform.right, newAngle.y);
+                this.transform.RotateAround(Object.transform.position, Vector3.up, newAngle.x);
+                this.transform.RotateAround(Object.transform.position, transform.right, newAngle.y);
                 lastMousePosition = Input.mousePosition;
             }
         }
