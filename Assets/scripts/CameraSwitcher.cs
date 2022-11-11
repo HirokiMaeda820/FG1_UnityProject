@@ -18,7 +18,7 @@ public class CameraSwitcher : MonoBehaviour
     private int oldCamera = 0;
 
 
-    enum SwitchName
+    public enum SwitchName
     {
         UP = 0,
         SIDE = 1,
@@ -30,16 +30,10 @@ public class CameraSwitcher : MonoBehaviour
         cameraSwitch = 0;
         oldCamera = 0;
         _upCamera.MoveToTopOfPrioritySubqueue();
-        _rubikArrows.gameObject.SetActive(false);
+
     }
 
     private void Update()
-    {
-        CameraSwitch(); //切り替え
-        CameraSetting(); //セット
-    }
-
-    private void CameraSwitch()
     {
         //スペース押したら選択モード
         if (Input.GetKeyDown(KeyCode.Space) && cameraSwitch != (int)SwitchName.SELECT)
@@ -70,25 +64,29 @@ public class CameraSwitcher : MonoBehaviour
                 cameraSwitch = (int)SwitchName.SELECT;//選択モードにする
             }
         }
-
     }
 
-    private void CameraSetting()
+    public int CameraSwitch()
     {
-        if (cameraSwitch == (int)SwitchName.UP)
+        return cameraSwitch;
+    }
+
+    public void CameraSetting()
+    {
+        if (CameraSwitch() == (int)SwitchName.UP)
         {
             _upCamera.MoveToTopOfPrioritySubqueue();//上からのカメラにする
-            _rubikArrows.gameObject.SetActive(false);
         }
         else if (cameraSwitch == (int)SwitchName.SIDE)
         {
             _sideCamera.MoveToTopOfPrioritySubqueue();//回せるカメラにする
-            _rubikArrows.gameObject.SetActive(false);
         }
         else if (cameraSwitch == (int)SwitchName.SELECT)
         {
             _selectCamera.MoveToTopOfPrioritySubqueue();//選択モードにする
-
         }
     }
+
+
+
 }

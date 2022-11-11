@@ -825,8 +825,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1159765273}
-  - component: {fileID: 1159765272}
-  - component: {fileID: 1159765274}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -834,18 +832,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1159765272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159765271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1502c88e00272541bef768a893ec41b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1159765273
 Transform:
   m_ObjectHideFlags: 0
@@ -861,23 +847,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1159765274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159765271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd68ac141134c140993826c5f5548f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _upCamera: {fileID: 1008299274}
-  _sideCamera: {fileID: 833915642}
-  _selectCamera: {fileID: 2095751047}
-  _rubikArrows: {fileID: 1829104223}
-  _cubeMover: {fileID: 1918664304}
 --- !u!1 &1437955686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1072,7 @@ GameObject:
   - component: {fileID: 1918664314}
   - component: {fileID: 1918664304}
   - component: {fileID: 1918664306}
+  - component: {fileID: 1918664315}
   - component: {fileID: 1918664310}
   - component: {fileID: 1918664313}
   m_Layer: 0
@@ -1287,6 +1257,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rubiksArrows: {fileID: 1829104223}
   cubemover: {fileID: 1918664304}
+  cameraSwitcher: {fileID: 1918664315}
+--- !u!114 &1918664315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918664297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd68ac141134c140993826c5f5548f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upCamera: {fileID: 1008299274}
+  _sideCamera: {fileID: 833915642}
+  _selectCamera: {fileID: 2095751047}
+  _rubikArrows: {fileID: 1829104223}
+  _cubeMover: {fileID: 1918664304}
 --- !u!1 &1964568401
 GameObject:
   m_ObjectHideFlags: 3
