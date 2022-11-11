@@ -8,6 +8,8 @@ public class CubeMover : MonoBehaviour
     public Transform centerCube;
     public Transform rootCube;
 
+    public GameManager gameManager;
+
     private bool isLocked; //true:ロック false:オフ
     public AudioClip audioFinished;
     public AudioClip[] audioRot;
@@ -256,6 +258,7 @@ public class CubeMover : MonoBehaviour
                 break;
         }
         isLocked = false; //ロック解除する
+        gameManager.subRotateCount();
     }
     public bool IsLocked()
     {

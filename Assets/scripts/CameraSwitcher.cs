@@ -6,6 +6,7 @@ using Cinemachine;
 
 public class CameraSwitcher : MonoBehaviour
 {
+
     [SerializeField] CinemachineVirtualCameraBase _upCamera;
     [SerializeField] CinemachineVirtualCameraBase _sideCamera;
 
@@ -13,7 +14,7 @@ public class CameraSwitcher : MonoBehaviour
 
     public Transform _rubikArrows;
     public CubeMover _cubeMover;
-
+    public GameManager _gameManager;
     private int cameraSwitch = 0;
     private int oldCamera = 0;
 
@@ -36,7 +37,8 @@ public class CameraSwitcher : MonoBehaviour
     private void Update()
     {
         //スペース押したら選択モード
-        if (Input.GetKeyDown(KeyCode.Space) && cameraSwitch != (int)SwitchName.SELECT)
+        if (Input.GetKeyDown(KeyCode.Space) && cameraSwitch != (int)SwitchName.SELECT
+            && _gameManager.RotateCount() >= 1) //回せる回数が1以上の時
         {
             cameraSwitch = (int)SwitchName.SELECT;
             oldCamera = (int)SwitchName.SELECT;

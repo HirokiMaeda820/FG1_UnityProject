@@ -7,21 +7,26 @@ public class PlayerMove : MonoBehaviour
     public float speed = 3.0f;
     public float rotateSpeed = 1.5f;
 
+    public CameraSwitcher cameraSwitcher;
+    CharacterController controller;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.UP)
+        {
+            Move();
+        } 
     }
 
     void Move()
     {
-        CharacterController controller = GetComponent<CharacterController>();
 
         // Rotate around y - axis
         transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);

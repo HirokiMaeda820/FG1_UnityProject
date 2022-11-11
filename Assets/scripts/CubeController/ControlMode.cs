@@ -8,6 +8,7 @@ public class ControlMode : MonoBehaviour
     public Transform rubiksArrows;
     public CubeMover cubemover;
     public CameraSwitcher cameraSwitcher;
+    public GameManager gameManager;
 
     public void Start()
     {
@@ -37,7 +38,8 @@ public class ControlMode : MonoBehaviour
         }
         else if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.SELECT)
         {
-            if (cubemover.isAvailable() && !cubemover.IsLocked())
+            //回転可能、ロック解除、回せる残りが回数が1以上
+            if (cubemover.isAvailable() && !cubemover.IsLocked() && (gameManager.RotateCount() >= 1))
             {
                 rubiksArrows.gameObject.SetActive(true);
             }
