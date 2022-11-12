@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Cinemachine;
 
 
@@ -15,6 +16,13 @@ public class CameraSwitcher : MonoBehaviour
     public Transform _rubikArrows;
     public CubeMover _cubeMover;
     public GameManager _gameManager;
+
+    public GameObject _upText;
+    public GameObject _sideText;
+    public GameObject _sideText2;
+    public GameObject _selectText;
+    public GameObject _TabText;
+
     private int cameraSwitch = 0;
     private int oldCamera = 0;
 
@@ -78,14 +86,29 @@ public class CameraSwitcher : MonoBehaviour
         if (CameraSwitch() == (int)SwitchName.UP)
         {
             _upCamera.MoveToTopOfPrioritySubqueue();//上からのカメラにする
+            _upText.SetActive(true);
+            _sideText.SetActive(false);
+            _sideText2.SetActive(false);
+            _selectText.SetActive(false);
+            _TabText.SetActive(true);
         }
         else if (cameraSwitch == (int)SwitchName.SIDE)
         {
             _sideCamera.MoveToTopOfPrioritySubqueue();//回せるカメラにする
+            _upText.SetActive(false);
+            _sideText.SetActive(true);
+            _sideText2.SetActive(true);
+            _selectText.SetActive(false);
+            _TabText.SetActive(false);
         }
         else if (cameraSwitch == (int)SwitchName.SELECT)
         {
             _selectCamera.MoveToTopOfPrioritySubqueue();//選択モードにする
+            _upText.SetActive(false);
+            _sideText.SetActive(false);
+            _sideText2.SetActive(false);
+            _selectText.SetActive(true);
+            _TabText.SetActive(true);
         }
     }
 

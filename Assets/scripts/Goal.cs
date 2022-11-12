@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class Goal : MonoBehaviour
 {
-    GameObject gameclearText;
-
+   
     private bool isGoal = false;
-    //public GameObject NextBotton;
+    public GameObject NextBotton;
+    public GameObject ClearText;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        this.gameObject.SetActive(true);
+        NextBotton.SetActive(false);
+        ClearText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,7 +27,8 @@ public class Goal : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         this.gameObject.SetActive(false);
-       // NextBotton.SetActive(true);
+        NextBotton.SetActive(true);
+        ClearText.SetActive(true);
         isGoal = true;
         Debug.Log("ÉSÅ[Éã");
     }

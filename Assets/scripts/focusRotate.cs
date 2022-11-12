@@ -5,24 +5,24 @@ using UnityEngine;
 public class focusRotate : MonoBehaviour
 {
     public GameObject Object;　//フォーカスするオブジェクト
-    public Vector2 rotationSpeed; 
+    public Vector2 rotationSpeed;
     public bool reverse;
 
-    //private GameObject Camera;//
+    public CameraSwitcher cameraSwitcher;
     private Vector2 lastMousePosition;
 
     void Start()
     {
         //Camera = Camera.main;
-       // Camera = GameObject.Find("CameraSide");
+        // Camera = GameObject.Find("CameraSide");
     }
 
     void Update()
     {
         // if (!Input.GetKey(KeyCode.Tab)) return;
-       
-        //アクティブな時しか動かないようにしたいね
 
+        //アクティブな時しか動かないようにしたいね
+        if (!(cameraSwitcher.CameraSwitch() == 1)) return;
 
         if (Input.GetMouseButtonDown(0))
         {

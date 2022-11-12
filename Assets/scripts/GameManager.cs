@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         rotateCount = rotateCountMax;
-        rotateText.text = "RotateCount : " + rotateCount;
+        if (rotateText != null)
+        {
+            rotateText.text = "c‚è‰ñ” : " + rotateCount;
+        }
     }
 
     void Update()
@@ -40,7 +43,7 @@ public class GameManager : MonoBehaviour
     public void subRotateCount()
     {
         rotateCount = rotateCount - 1;
-        rotateText.text = "RotateCount : " + rotateCount;
+        rotateText.text = "c‚è‰ñ” : " + rotateCount;
     }
 
     public int RotateCount()

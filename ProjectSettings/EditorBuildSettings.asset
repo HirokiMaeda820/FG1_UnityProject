@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/masterMiyata.unity
     guid: bc0ec7ffb492c1a44b038404df6c4010
+  - enabled: 1
+    path: Assets/Scenes/TitleScene.unity
+    guid: fd2e5e8c53a57874fb0fd0dd5b0b8097
   m_configObjects: {}
