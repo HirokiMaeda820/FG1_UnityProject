@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 60;   //60fps
+        Screen.SetResolution(1920, 1080, true); // フルスクリーンモード
+
         rotateCount = rotateCountMax;
         if (rotateText != null)
         {
@@ -27,6 +30,11 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey(KeyCode.R) && !goal.GetComponent<Goal>().GetIsGoal())
         {
             SceneReset();
+        }
+        //ESCとDELETEでタイトル
+        if (Input.GetKey(KeyCode.Escape) && Input.GetKey(KeyCode.Delete))
+        {
+            ChangeScene("TitleScene");
         }
     }
 

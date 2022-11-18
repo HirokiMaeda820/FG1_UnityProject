@@ -16,6 +16,7 @@ public class CameraSwitcher : MonoBehaviour
     public Transform _rubikArrows;
     public CubeMover _cubeMover;
     public GameManager _gameManager;
+    public GameObject _player;
 
     public GameObject _upText;
     public GameObject _sideText;
@@ -86,6 +87,8 @@ public class CameraSwitcher : MonoBehaviour
         if (CameraSwitch() == (int)SwitchName.UP)
         {
             _upCamera.MoveToTopOfPrioritySubqueue();//上からのカメラにする
+            _player.SetActive(true);
+
             _upText.SetActive(true);
             _sideText.SetActive(false);
             _sideText2.SetActive(false);
@@ -95,6 +98,8 @@ public class CameraSwitcher : MonoBehaviour
         else if (cameraSwitch == (int)SwitchName.SIDE)
         {
             _sideCamera.MoveToTopOfPrioritySubqueue();//回せるカメラにする
+            _player.SetActive(false);
+
             _upText.SetActive(false);
             _sideText.SetActive(true);
             _sideText2.SetActive(true);
@@ -104,6 +109,8 @@ public class CameraSwitcher : MonoBehaviour
         else if (cameraSwitch == (int)SwitchName.SELECT)
         {
             _selectCamera.MoveToTopOfPrioritySubqueue();//選択モードにする
+            _player.SetActive(false);
+
             _upText.SetActive(false);
             _sideText.SetActive(false);
             _sideText2.SetActive(false);

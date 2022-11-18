@@ -18,7 +18,7 @@ public class CubeMover : MonoBehaviour
     Vector3 rotation;
     float rotation_sum;
     //List<float> speeds;
-    public float rotateSpeed = 1.6f;
+    private float rotateSpeed = 1.6f; //スピード
     Transform root;
     bool shouldDestroy;
 
