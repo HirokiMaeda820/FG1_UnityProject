@@ -109,7 +109,8 @@ public class CameraSwitcher : MonoBehaviour
         else if (cameraSwitch == (int)SwitchName.SELECT)
         {
             _selectCamera.MoveToTopOfPrioritySubqueue();//ëIëÉÇÅ[ÉhÇ…Ç∑ÇÈ
-            _player.SetActive(false);
+            _player.SetActive(true);
+            
 
             _upText.SetActive(false);
             _sideText.SetActive(false);
