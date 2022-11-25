@@ -39,6 +39,7 @@ public class CameraSwitcher : MonoBehaviour
     {
         cameraSwitch = 0;
         oldCamera = 0;
+
         _upCamera.MoveToTopOfPrioritySubqueue();
 
     }
@@ -62,6 +63,7 @@ public class CameraSwitcher : MonoBehaviour
         if (Input.GetKey(KeyCode.Tab)) //Tabキー押してたら
         {
             cameraSwitch = (int)SwitchName.SIDE; //見回すカメラ
+
         }
 
         else if (Input.GetKeyUp(KeyCode.Tab))//Tab離したとき
@@ -110,8 +112,7 @@ public class CameraSwitcher : MonoBehaviour
         {
             _selectCamera.MoveToTopOfPrioritySubqueue();//選択モードにする
             _player.SetActive(true);
-            
-
+           
             _upText.SetActive(false);
             _sideText.SetActive(false);
             _sideText2.SetActive(false);

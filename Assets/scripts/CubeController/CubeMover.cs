@@ -8,6 +8,8 @@ public class CubeMover : MonoBehaviour
     public Transform centerCube;
     public Transform rootCube;
 
+    public Transform player;
+
     public GameManager gameManager;
 
     private bool isLocked; //true:ロック false:オフ
@@ -95,7 +97,7 @@ public class CubeMover : MonoBehaviour
                         }
                     }
                     cleanRoot();
-                    
+
                 }
             }
         }
@@ -115,10 +117,17 @@ public class CubeMover : MonoBehaviour
             foreach (Transform t in ts)
             {
                 t.SetParent(root);
+
+            }
+            if (axis == rootCube.up && is90Degree == false && isAll == false && (_orientation == 1 || _orientation == -1))
+            {
+                player.SetParent(root);
+                Debug.Log("こんにちは");
             }
             rotation = axis * _orientation * rotateSpeed;
         }
     }
+
 
     void cleanRoot()
     {
@@ -238,10 +247,10 @@ public class CubeMover : MonoBehaviour
             case "L_B":
                 moveCubes(-rootCube.right, false, false, -1);
                 break;
-            case "U_R":
+            case "U_R"://
                 moveCubes(rootCube.up, false, false, -1);
                 break;
-            case "U_L":
+            case "U_L"://
                 moveCubes(rootCube.up, false, false, 1);
                 break;
             case "Um_R":

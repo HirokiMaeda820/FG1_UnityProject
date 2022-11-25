@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class Goal : MonoBehaviour
 {
-   
+
     private bool isGoal = false;
+
     public GameObject NextBotton;
     public GameObject ClearText;
+
+    private bomb _bomb;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +19,8 @@ public class Goal : MonoBehaviour
         this.gameObject.SetActive(true);
         NextBotton.SetActive(false);
         ClearText.SetActive(false);
+        isGoal = false;
+        _bomb = GetComponent<bomb>();
     }
 
     // Update is called once per frame
@@ -26,11 +31,15 @@ public class Goal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        this.gameObject.SetActive(false);
-        NextBotton.SetActive(true);
-        ClearText.SetActive(true);
-        isGoal = true;
-        Debug.Log("ÉSÅ[Éã");
+        if (other.gameObject.tag == "Player")
+        {
+            this.gameObject.SetActive(false);
+
+            NextBotton.SetActive(true);
+            ClearText.SetActive(true);
+            isGoal = true;
+            Debug.Log("ÉSÅ[Éã");
+        }
     }
 
     public bool GetIsGoal() { return isGoal; }

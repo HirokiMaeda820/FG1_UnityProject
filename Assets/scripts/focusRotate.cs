@@ -11,18 +11,32 @@ public class focusRotate : MonoBehaviour
     public CameraSwitcher cameraSwitcher;
     private Vector2 lastMousePosition;
 
+    bool sideCameraReset;
+
     void Start()
     {
         //Camera = Camera.main;
         // Camera = GameObject.Find("CameraSide");
+        sideCameraReset = false;
     }
 
     void Update()
     {
         // if (!Input.GetKey(KeyCode.Tab)) return;
 
-        //アクティブな時しか動かないようにしたいね
-        if (!(cameraSwitcher.CameraSwitch() == 1)) return;
+        //アクティブじゃないときはreturn
+        if (!(cameraSwitcher.CameraSwitch() == 1))
+        {
+            sideCameraReset = false;
+            return;
+        }
+
+        if (!sideCameraReset)
+        {
+            transform.position = new Vector3(0, 0, -60.0f);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            sideCameraReset = true;
+        }
 
         if (Input.GetMouseButtonDown(0))
         {

@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public CameraSwitcher cameraSwitcher;
     CharacterController controller;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +22,19 @@ public class PlayerMove : MonoBehaviour
     {
         if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.UP)
         {
+            // controller.enabled = true;
             Move();
-        } 
+        }
+        else
+        {
+            //controller.enabled = false;
+        }
     }
 
     void Move()
     {
+
+        CharacterController controller = GetComponent<CharacterController>();
 
         // Rotate around y - axis
         transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);

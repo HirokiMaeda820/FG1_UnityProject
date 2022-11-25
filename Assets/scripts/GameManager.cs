@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int rotateCountMax;
     private int rotateCount;
     public Text rotateText;
-    public GameObject goal;
+    public Goal goal;
 
     private void Start()
     {
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Rキーでリセットする
-        if (Input.GetKey(KeyCode.R) && !goal.GetComponent<Goal>().GetIsGoal())
+        if (Input.GetKey(KeyCode.R) /*&& !goal.GetIsGoal()*/)
         {
             SceneReset();
         }

@@ -63,8 +63,9 @@ public class CtrlKeyMouse : MonoBehaviour
                     case "Arrow_R2":
                         cubemover.move("Um_L");
                         break;
-                    case "Arrow_R3":
+                    case "Arrow_R3": //è„ñ ç∂é¸ÇË
                         cubemover.move("U_L");
+                        Debug.Log("R3");
                         break;
                     case "Arrow_R4":
                         cubemover.move("Fm_R");
@@ -84,8 +85,9 @@ public class CtrlKeyMouse : MonoBehaviour
                     case "Arrow_R8":
                         cubemover.move("Um_R");
                         break;
-                    case "Arrow_R9":
+                    case "Arrow_R9": //è„ñ âEâÒÇË
                         cubemover.move("U_R");
+                        Debug.Log("R9");
                         break;
                     case "Arrow_U1":
                         cubemover.move("B_R");
