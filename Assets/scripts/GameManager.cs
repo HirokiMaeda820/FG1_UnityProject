@@ -10,12 +10,17 @@ public class GameManager : MonoBehaviour
     public int rotateCountMax;
     private int rotateCount;
     public Text rotateText;
-    public Goal goal;
+
+    private GameObject _goal;
+    private Goal _goalScript;
 
     private void Start()
     {
         Application.targetFrameRate = 60;   //60fps
         Screen.SetResolution(1920, 1080, true); // フルスクリーンモード
+
+        _goal = GameObject.Find("GoalCollider");
+        _goalScript = _goal.GetComponent<Goal>();
 
         rotateCount = rotateCountMax;
         if (rotateText != null)
@@ -27,7 +32,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Rキーでリセットする
-        if (Input.GetKey(KeyCode.R) /*&& !goal.GetIsGoal()*/)
+        if (Input.GetKey(KeyCode.R) /*&& !_goalScript.GetIsGoal()*/)
         {
             SceneReset();
         }

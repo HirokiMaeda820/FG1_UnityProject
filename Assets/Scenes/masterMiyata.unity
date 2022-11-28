@@ -180,6 +180,7 @@ MonoBehaviour:
   m_force: 100
   m_radius: 100
   m_upwards: 10
+  centerCube: {fileID: 8164078559938683475}
 --- !u!1 &31893255
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,30 +1,37 @@
 using UnityEngine;
 
-
 public class bomb : MonoBehaviour
 {
     //[SerializeField] ParticleSystem m_particle;
-    public Goal _goal;
+    private GameObject _goal;
+    private Goal _goalScript;
 
     [SerializeField] float m_force = 20;
     [SerializeField] float m_radius = 5;
     [SerializeField] float m_upwards = 5;
     Vector3 m_position;
 
+    public GameObject centerCube;
+
     bool flag = false;
 
     void Start()
     {
         flag = false;
+        _goal = GameObject.Find("GoalCollider");
+        _goalScript = _goal.GetComponent<Goal>();
     }
 
     void Update()
     {
-        if ((_goal.GetIsGoal() || Input.GetKeyDown(KeyCode.Return)) && (flag == false))
+        if ((_goalScript.GetIsGoal() || Input.GetKeyDown(KeyCode.Return)) && (flag == false))
         {
-            Explosion();
-            flag = true;
-            Debug.Log("‚Î‚­‚Í‚Â");
+            if (centerCube.activeSelf == false)
+            {
+                Explosion();
+                flag = true;
+                Debug.Log("‚Î‚­‚Í‚Â");
+            }
         }
     }
 
@@ -43,6 +50,6 @@ public class bomb : MonoBehaviour
                 rb.AddExplosionForce(m_force, m_position, m_radius, m_upwards, ForceMode.VelocityChange);
             }
         }
-        
+
     }
 }

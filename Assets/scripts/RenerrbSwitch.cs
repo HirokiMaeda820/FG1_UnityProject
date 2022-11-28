@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class RenerrbSwitch : MonoBehaviour
 {
-    public Goal _goal;
-    private Rigidbody rb;
+    private GameObject _goal;
+    private Goal _goalScript;
 
-    private GameObject Render;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Render = this.gameObject;
+        _goal = GameObject.Find("GoalCollider");
+        _goalScript = _goal.GetComponent<Goal>();
 
         if (this.transform.tag == "CenterCube")
         {
@@ -24,7 +25,7 @@ public class RenerrbSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_goal.GetIsGoal())
+        if (_goalScript.GetIsGoal())
         {
             rb.isKinematic = false;
 
@@ -33,7 +34,7 @@ public class RenerrbSwitch : MonoBehaviour
                 this.gameObject.SetActive(false);
             }
         }
-        else if (!_goal.GetIsGoal())
+        else if (!_goalScript.GetIsGoal())
         {
             rb.isKinematic = true;
         }
