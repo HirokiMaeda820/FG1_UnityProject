@@ -10,6 +10,7 @@ public class CameraSwitcher : MonoBehaviour
 
     [SerializeField] CinemachineVirtualCameraBase _upCamera;
     [SerializeField] CinemachineVirtualCameraBase _sideCamera;
+    [SerializeField] CinemachineVirtualCameraBase _playerCamera;
 
     [SerializeField] CinemachineVirtualCameraBase _selectCamera;
 
@@ -35,7 +36,8 @@ public class CameraSwitcher : MonoBehaviour
         cameraSwitch = 0;
         oldCamera = 0;
 
-        _upCamera.MoveToTopOfPrioritySubqueue();
+        _playerCamera.MoveToTopOfPrioritySubqueue();
+        //_upCamera.MoveToTopOfPrioritySubqueue();
 
     }
 
@@ -88,7 +90,8 @@ public class CameraSwitcher : MonoBehaviour
     {
         if (CameraSwitch() == (int)SwitchName.UP)
         {
-            _upCamera.MoveToTopOfPrioritySubqueue();//è„Ç©ÇÁÇÃÉJÉÅÉâÇ…Ç∑ÇÈ
+            _playerCamera.MoveToTopOfPrioritySubqueue();
+          //_upCamera.MoveToTopOfPrioritySubqueue();//è„Ç©ÇÁÇÃÉJÉÅÉâÇ…Ç∑ÇÈ
           //  _player.SetActive(true);
 
         }
