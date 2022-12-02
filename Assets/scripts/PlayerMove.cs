@@ -33,7 +33,6 @@ public class PlayerMove : MonoBehaviour
 
     void Move()
     {
-
         CharacterController controller = GetComponent<CharacterController>();
 
         // Rotate around y - axis

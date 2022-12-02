@@ -13,6 +13,8 @@ public class CubeMover : MonoBehaviour
     public GameManager gameManager;
 
     private bool isLocked; //true:ロック false:オフ
+    public bool isRotate;
+
     public AudioClip audioFinished;
     public AudioClip[] audioRot;
 
@@ -29,7 +31,7 @@ public class CubeMover : MonoBehaviour
     {
         root = null;
         isLocked = false;
-
+        isRotate = false;
         rotation_sum = 0;
         audioSource = transform.GetComponent<AudioSource>();
         audioSource.loop = false; // for audio looping
@@ -122,9 +124,14 @@ public class CubeMover : MonoBehaviour
             if (axis == rootCube.up && is90Degree == false && isAll == false && (_orientation == 1 || _orientation == -1))
             {
                 player.SetParent(root);
-                Debug.Log("こんにちは");
+                //Debug.Log("こんにちは");
             }
             rotation = axis * _orientation * rotateSpeed;
+            isRotate = true;
+        }
+        else
+        {
+            isRotate= false;
         }
     }
 
@@ -269,9 +276,14 @@ public class CubeMover : MonoBehaviour
         isLocked = false; //ロック解除する
         gameManager.subRotateCount();
     }
-    public bool IsLocked()
+    public bool IsLocked()//true:ロック false:オフ
     {
         return isLocked;
+    }
+    
+    public bool GetIsRotate()
+    {
+        return isRotate;
     }
 }
 

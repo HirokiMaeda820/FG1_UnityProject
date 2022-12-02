@@ -67,7 +67,7 @@ public class CameraSwitcher : MonoBehaviour
             {
                 cameraSwitch = (int)SwitchName.UP;//上からのカメラにする
             }
-            if (oldCamera == (int)SwitchName.SELECT)//前が選択モードなら
+            else if (oldCamera == (int)SwitchName.SELECT)//前が選択モードなら
             {
                 cameraSwitch = (int)SwitchName.SELECT;//選択モードにする
             }
@@ -78,26 +78,31 @@ public class CameraSwitcher : MonoBehaviour
     {
         return cameraSwitch;
     }
+    public void SetCameraSwitch(int switchNum)
+    {
+        cameraSwitch = switchNum;
+    }
+
 
     public void CameraSetting()
     {
         if (CameraSwitch() == (int)SwitchName.UP)
         {
             _upCamera.MoveToTopOfPrioritySubqueue();//上からのカメラにする
-            _player.SetActive(true);
+          //  _player.SetActive(true);
 
         }
         else if (cameraSwitch == (int)SwitchName.SIDE)
         {
             _sideCamera.MoveToTopOfPrioritySubqueue();//回せるカメラにする
-            _player.SetActive(false);
+          //  _player.SetActive(false);
 
 
         }
         else if (cameraSwitch == (int)SwitchName.SELECT)
         {
             _selectCamera.MoveToTopOfPrioritySubqueue();//選択モードにする
-            _player.SetActive(true);
+           // _player.SetActive(true);
 
         }
     }
