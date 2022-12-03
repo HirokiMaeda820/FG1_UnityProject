@@ -11,6 +11,7 @@ public class Goal : MonoBehaviour
     public GameObject NextBotton;
     public GameObject ClearText;
 
+
     private bomb _bomb;
 
     // Start is called before the first frame update

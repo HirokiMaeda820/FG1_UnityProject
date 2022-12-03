@@ -65,29 +65,14 @@ public class ControlMode : MonoBehaviour
                 {
                     rubiksArrows.transform.GetChild(i).gameObject.SetActive(true);
                 }
-              
+
                 switch (faceTagName)
                 {
                     case "Face1":
+
                         rubiksArrows.transform.Find("Arrow_U1").gameObject.SetActive(false);
                         rubiksArrows.transform.Find("Arrow_U7").gameObject.SetActive(false);
                         rubiksArrows.transform.Find("Arrow_F1").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
                         rubiksArrows.transform.Find("Arrow_F7").gameObject.SetActive(false);
                         break;
 

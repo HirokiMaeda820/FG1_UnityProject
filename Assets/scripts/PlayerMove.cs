@@ -70,8 +70,13 @@ public class PlayerMove : MonoBehaviour
         else
         {
             // カメラを基準に入力が上下=奥/手前, 左右=左右にキャラクターを向ける
-            dir = Camera.main.transform.TransformDirection(dir);    // メインカメラを基準に入力方向のベクトルを変換する
-            dir.y = 0;  // y 軸方向はゼロにして水平方向のベクトルにする
+            if (Camera.main != null)
+            {
+                dir = Camera.main.transform.TransformDirection(dir);
+                // メインカメラを基準に入力方向のベクトルを変換する
+                dir.y = 0;  // y 軸方向はゼロにして水平方向のベクトルにする
+            }
+
 
 
             // 入力方向に滑らかに回転させる

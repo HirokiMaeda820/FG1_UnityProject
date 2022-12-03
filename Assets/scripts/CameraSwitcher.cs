@@ -7,8 +7,10 @@ using Cinemachine;
 
 public class CameraSwitcher : MonoBehaviour
 {
+    [SerializeField] GameObject _mainCamera;
+    [SerializeField] GameObject _goalCamera;
 
-    [SerializeField] CinemachineVirtualCameraBase _upCamera;
+    [SerializeField] GameObject _upCamera;
     [SerializeField] CinemachineVirtualCameraBase _sideCamera;
     [SerializeField] CinemachineVirtualCameraBase _playerCamera;
 
@@ -19,22 +21,33 @@ public class CameraSwitcher : MonoBehaviour
     public GameManager _gameManager;
     public GameObject _player;
 
+    private Goal _goal;
 
     private int cameraSwitch = 0;
     private int oldCamera = 0;
 
+    public GameObject _frameImage;
+    public GameObject _upCameraFrameImage;
 
     public enum SwitchName
     {
         UP = 0,
         SIDE = 1,
-        SELECT = 2
+        SELECT = 2,
+        Goal = 3
     }
 
     private void Start()
     {
-        cameraSwitch = 0;
-        oldCamera = 0;
+        cameraSwitch = (int)SwitchName.UP;
+        oldCamera = (int)SwitchName.UP;
+
+        _mainCamera.SetActive(true);
+        _goalCamera.SetActive(false);
+
+        _goal = GameObject.Find("GoalCollider").GetComponent<Goal>();
+
+        _frameImage.SetActive(false);
 
         _playerCamera.MoveToTopOfPrioritySubqueue();
         //_upCamera.MoveToTopOfPrioritySubqueue();
@@ -85,28 +98,56 @@ public class CameraSwitcher : MonoBehaviour
         cameraSwitch = switchNum;
     }
 
+    public void SetOldCamera(int oldNum)
+    {
+        oldCamera = oldNum;
+    }
+
 
     public void CameraSetting()
     {
+        //プレイヤーの時
         if (CameraSwitch() == (int)SwitchName.UP)
         {
             _playerCamera.MoveToTopOfPrioritySubqueue();
-          //_upCamera.MoveToTopOfPrioritySubqueue();//上からのカメラにする
-          //  _player.SetActive(true);
 
+            _upCamera.SetActive(true);
+            //  _player.SetActive(true);
+
+            _frameImage.SetActive(false);
+            _upCameraFrameImage.SetActive(true);
         }
+        //見回す時
         else if (cameraSwitch == (int)SwitchName.SIDE)
         {
             _sideCamera.MoveToTopOfPrioritySubqueue();//回せるカメラにする
-          //  _player.SetActive(false);
-
-
+                                                      //  _player.SetActive(false);
+            _upCamera.SetActive(false);
+            _frameImage.SetActive(true);
+            _upCameraFrameImage.SetActive(false);
         }
+        //回すとき
         else if (cameraSwitch == (int)SwitchName.SELECT)
         {
             _selectCamera.MoveToTopOfPrioritySubqueue();//選択モードにする
-           // _player.SetActive(true);
+                                                        // _player.SetActive(true);
 
+            _upCamera.SetActive(false);
+            _frameImage.SetActive(true);
+            _upCameraFrameImage.SetActive(false);
+        }
+
+        //ゴールしてたら斜め上から見る
+        if (_goal.GetIsGoal())
+        {
+            _mainCamera.SetActive(false);
+            _goalCamera.SetActive(true);
+
+            _upCamera.SetActive(false);
+            _frameImage.SetActive(false);
+            _upCameraFrameImage.SetActive(false);
+
+            _rubikArrows.gameObject.SetActive(false);
         }
     }
 

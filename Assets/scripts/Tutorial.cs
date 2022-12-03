@@ -17,6 +17,10 @@ public class Tutorial : MonoBehaviour
     private GameObject sideCamera;
     public CubeMover cubeMover;
     public CameraSwitcher cameraSwitcher;
+    private GameObject player;
+
+    public GameObject wall1;
+    public GameObject wall2;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +34,8 @@ public class Tutorial : MonoBehaviour
         {
             countText.text = "tutorial : " + tutorialCount;
         }
+        wall1.SetActive(true);
+        wall2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -61,6 +67,7 @@ public class Tutorial : MonoBehaviour
                 if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.SELECT)
                 {
                     cameraSwitcher.SetCameraSwitch((int)CameraSwitcher.SwitchName.UP);
+                    cameraSwitcher.SetOldCamera((int)CameraSwitcher.SwitchName.UP);
                 }
 
                 //回転させたら3にする
@@ -71,16 +78,18 @@ public class Tutorial : MonoBehaviour
 
 
                 }
-                if(UpdateCount(2))
+                if (UpdateCount(2))
                 {
                     cameraSwitcher.SetCameraSwitch((int)CameraSwitcher.SwitchName.UP);
+                    cameraSwitcher.SetOldCamera((int)CameraSwitcher.SwitchName.UP);
                 }
 
                 break;
-            case 2://SPACEで切り替える
+            case 2://SPACEで切り替える、矢印押して回す
 
-                //切り替わったら3に
-                if (Input.GetKeyDown(KeyCode.Space))
+                //なんでもいいから1つ回そうね
+                //回したら3
+                if (cubeMover.GetIsRotate())
                 {
                     startTimer = true;
                 }
@@ -88,28 +97,22 @@ public class Tutorial : MonoBehaviour
 
 
                 break;
-            case 3://矢印押して回す
+            case 3://プレイヤーが乗ってるブロックは回せない
 
-                //矢印指定する
-
-                //回したら4
-                if (cubeMover.GetIsRotate())
-                {
-                    startTimer = true;
-                }
-                UpdateCount(4);
 
                 break;
-            case 4://spaceで戻す
-                //戻したら5
-                if (Input.GetKeyDown(KeyCode.Space))
+
+
+            case 4://プレイヤーを横のブロックまで移動させる
+                   //移動したら
+                if (player.GetComponent<PlayerTutorialHitFace>().GetHitFace())
                 {
                     startTimer = true;
                 }
                 UpdateCount(5);
 
                 break;
-            case 5://ゴールしよう
+            case 5://回転させてゴール
 
                 // ゴールしたらNextScene
                 break;
