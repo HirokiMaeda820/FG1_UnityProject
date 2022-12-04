@@ -18,8 +18,9 @@ public class Goal : MonoBehaviour
     void Start()
     {
         this.gameObject.SetActive(true);
-        NextBotton.SetActive(false);
-        ClearText.SetActive(false);
+
+        if(NextBotton != null) NextBotton.SetActive(false);
+        if(ClearText != null)ClearText.SetActive(false);
         isGoal = false;
         _bomb = GetComponent<bomb>();
     }
@@ -36,8 +37,8 @@ public class Goal : MonoBehaviour
         {
             this.gameObject.SetActive(false);
 
-            NextBotton.SetActive(true);
-            ClearText.SetActive(true);
+            if (NextBotton != null) NextBotton.SetActive(true);
+            if (ClearText != null) ClearText.SetActive(true);
             isGoal = true;
             Debug.Log("ÉSÅ[Éã");
         }

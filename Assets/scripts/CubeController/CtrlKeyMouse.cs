@@ -5,13 +5,16 @@ using UnityEngine;
 public class CtrlKeyMouse : MonoBehaviour
 {
     public CubeMover cubemover;
+   // private Goal goal;
+
+   // public Camera goalCamera;
 
     //public CanvasRaycastBlocker crb;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        //goal = GameObject.Find("GoalCollider").GetComponent<Goal>();
     }
 
     // Update is called once per frame
@@ -23,6 +26,9 @@ public class CtrlKeyMouse : MonoBehaviour
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            //if (!goal.GetIsGoal()) ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //if (goal.GetIsGoal()) ray = goalCamera.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
             {

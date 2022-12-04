@@ -29,6 +29,10 @@ public class CameraSwitcher : MonoBehaviour
     public GameObject _frameImage;
     public GameObject _upCameraFrameImage;
 
+    public GameObject icon_player;
+    public GameObject icon_Rotate;
+    public GameObject icon_select;
+
     public enum SwitchName
     {
         UP = 0,
@@ -116,6 +120,10 @@ public class CameraSwitcher : MonoBehaviour
 
             _frameImage.SetActive(false);
             _upCameraFrameImage.SetActive(true);
+
+            icon_player.SetActive(true);
+            icon_Rotate.SetActive(false);
+            icon_select.SetActive(false);
         }
         //見回す時
         else if (cameraSwitch == (int)SwitchName.SIDE)
@@ -125,8 +133,12 @@ public class CameraSwitcher : MonoBehaviour
             _upCamera.SetActive(false);
             _frameImage.SetActive(true);
             _upCameraFrameImage.SetActive(false);
+
+            icon_player.SetActive(false);
+            icon_Rotate.SetActive(true);
+            icon_select.SetActive(false);
         }
-        //回すとき
+        //キューブ回すとき
         else if (cameraSwitch == (int)SwitchName.SELECT)
         {
             _selectCamera.MoveToTopOfPrioritySubqueue();//選択モードにする
@@ -135,17 +147,24 @@ public class CameraSwitcher : MonoBehaviour
             _upCamera.SetActive(false);
             _frameImage.SetActive(true);
             _upCameraFrameImage.SetActive(false);
+
+            icon_player.SetActive(false);
+            icon_Rotate.SetActive(false);
+            icon_select.SetActive(true);
         }
 
         //ゴールしてたら斜め上から見る
         if (_goal.GetIsGoal())
         {
-            _mainCamera.SetActive(false);
             _goalCamera.SetActive(true);
 
             _upCamera.SetActive(false);
             _frameImage.SetActive(false);
             _upCameraFrameImage.SetActive(false);
+
+            icon_player.SetActive(false);
+            icon_Rotate.SetActive(false);
+            icon_select.SetActive(false);
 
             _rubikArrows.gameObject.SetActive(false);
         }

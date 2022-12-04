@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RenerrbSwitch : MonoBehaviour
 {
-    private GameObject _goal;
-    private Goal _goalScript;
+    private Goal _goal;
 
     private Rigidbody rb;
 
@@ -13,8 +12,8 @@ public class RenerrbSwitch : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        _goal = GameObject.Find("GoalCollider");
-        _goalScript = _goal.GetComponent<Goal>();
+
+        _goal = GameObject.Find("GoalCollider").GetComponent<Goal>();
 
         if (this.transform.tag == "CenterCube")
         {
@@ -25,7 +24,9 @@ public class RenerrbSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_goalScript.GetIsGoal())
+        if (_goal == null) return;
+
+        if (_goal.GetIsGoal())
         {
             rb.isKinematic = false;
 
@@ -34,7 +35,7 @@ public class RenerrbSwitch : MonoBehaviour
                 this.gameObject.SetActive(false);
             }
         }
-        else if (!_goalScript.GetIsGoal())
+        else if (!_goal.GetIsGoal())
         {
             rb.isKinematic = true;
         }

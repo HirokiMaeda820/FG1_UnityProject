@@ -17,7 +17,7 @@ public class Tutorial : MonoBehaviour
     private GameObject sideCamera;
     public CubeMover cubeMover;
     public CameraSwitcher cameraSwitcher;
-    private GameObject player;
+    public GameObject player;
 
     public GameObject wall1;
     public GameObject wall2;
@@ -99,22 +99,37 @@ public class Tutorial : MonoBehaviour
                 break;
             case 3://プレイヤーが乗ってるブロックは回せない
 
-
+                //アニメーション？したら
+                startTimer = true;
+                if (UpdateCount(4))
+                {
+                    wall1.SetActive(false);
+                    wall2.SetActive(true);
+                }
                 break;
 
 
             case 4://プレイヤーを横のブロックまで移動させる
+
                    //移動したら
                 if (player.GetComponent<PlayerTutorialHitFace>().GetHitFace())
                 {
                     startTimer = true;
                 }
-                UpdateCount(5);
+                if (UpdateCount(5))
+                {
+                    wall2.SetActive(false);
+                }
 
                 break;
             case 5://回転させてゴール
 
                 // ゴールしたらNextScene
+                break;
+
+                default:
+                Debug.Log("tutorial.cs");
+
                 break;
 
         }
