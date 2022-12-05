@@ -19514,6 +19514,7 @@ GameObject:
   - component: {fileID: 2823090747050525587}
   - component: {fileID: 1587545474561255175}
   - component: {fileID: 8164078558073825763}
+  - component: {fileID: 8164078558073825764}
   m_Layer: 0
   m_Name: Arrow_F7
   m_TagString: RubiksArrows
@@ -19534,6 +19535,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028815, y: 0.051761422, z: 3.3395326}
   m_Center: {x: 0.0028038628, y: -0.025879947, z: -0.6697661}
+--- !u!114 &8164078558073825764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558073825762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078558074391430
 GameObject:
   m_ObjectHideFlags: 0
@@ -19886,6 +19901,7 @@ GameObject:
   - component: {fileID: 2823090746965367561}
   - component: {fileID: 1587545474413576093}
   - component: {fileID: 8164078558192087417}
+  - component: {fileID: 8164078558192087418}
   m_Layer: 0
   m_Name: Arrow_F3
   m_TagString: RubiksArrows
@@ -19906,6 +19922,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051761024, z: 3.3395326}
   m_Center: {x: 0.002800047, y: -0.025880028, z: -0.6697661}
+--- !u!114 &8164078558192087418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558192087416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078558222461646
 GameObject:
   m_ObjectHideFlags: 0
@@ -19936,6 +19966,7 @@ GameObject:
   - component: {fileID: 2823090746902638711}
   - component: {fileID: 1587545474484786403}
   - component: {fileID: 8164078558255176199}
+  - component: {fileID: 8164078558255176200}
   m_Layer: 0
   m_Name: Arrow_U6
   m_TagString: RubiksArrows
@@ -19956,6 +19987,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051760998, z: 3.3395312}
   m_Center: {x: 0.002799123, y: -0.025880499, z: -0.66976726}
+--- !u!114 &8164078558255176200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558255176198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078558264931850
 GameObject:
   m_ObjectHideFlags: 0
@@ -20622,6 +20667,7 @@ GameObject:
   - component: {fileID: 2823090746639429957}
   - component: {fileID: 1587545474703922641}
   - component: {fileID: 8164078558484798261}
+  - component: {fileID: 8164078558484798262}
   m_Layer: 0
   m_Name: Arrow_R8
   m_TagString: RubiksArrows
@@ -20642,6 +20688,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028815, y: 0.05176102, z: 3.3395312}
   m_Center: {x: 0.002801419, y: -0.025882887, z: -0.66976345}
+--- !u!114 &8164078558484798262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558484798260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078558520692584
 GameObject:
   m_ObjectHideFlags: 0
@@ -20922,6 +20982,7 @@ GameObject:
   - component: {fileID: 2823090746380930217}
   - component: {fileID: 1587545473891788861}
   - component: {fileID: 8164078558743258841}
+  - component: {fileID: 8164078558743258842}
   m_Layer: 0
   m_Name: Arrow_F2
   m_TagString: RubiksArrows
@@ -20942,6 +21003,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051761024, z: 3.3395326}
   m_Center: {x: 0.0027991529, y: -0.02587955, z: -0.6697661}
+--- !u!114 &8164078558743258842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558743258840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078558745527381
 GameObject:
   m_ObjectHideFlags: 0
@@ -21008,6 +21083,7 @@ GameObject:
   - component: {fileID: 2823090746372263522}
   - component: {fileID: 1587545473899899638}
   - component: {fileID: 8164078558751892500}
+  - component: {fileID: 8164078558751892501}
   m_Layer: 0
   m_Name: Arrow_R9
   m_TagString: RubiksArrows
@@ -21028,6 +21104,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028815, y: 0.05176102, z: 3.3395312}
   m_Center: {x: 0.0028012402, y: -0.025882887, z: -0.669762}
+--- !u!114 &8164078558751892501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558751892499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078558755373965
 GameObject:
   m_ObjectHideFlags: 0
@@ -21282,6 +21372,7 @@ GameObject:
   - component: {fileID: 2823090746321754017}
   - component: {fileID: 1587545474251911989}
   - component: {fileID: 8164078558836129233}
+  - component: {fileID: 8164078558836129234}
   m_Layer: 0
   m_Name: Arrow_R7
   m_TagString: RubiksArrows
@@ -21302,6 +21393,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028815, y: 0.051761437, z: 3.339533}
   m_Center: {x: 0.0028034283, y: -0.025882369, z: -0.6697666}
+--- !u!114 &8164078558836129234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558836129232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078558839990281
 GameObject:
   m_ObjectHideFlags: 0
@@ -21386,6 +21491,7 @@ GameObject:
   - component: {fileID: 2823090746290174937}
   - component: {fileID: 1587545474291883853}
   - component: {fileID: 8164078558867444137}
+  - component: {fileID: 8164078558867444138}
   m_Layer: 0
   m_Name: Arrow_F6
   m_TagString: RubiksArrows
@@ -21406,6 +21512,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028818, y: 0.051761426, z: 3.3395324}
   m_Center: {x: 0.0028014916, y: -0.025880463, z: -0.6697707}
+--- !u!114 &8164078558867444138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558867444136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078558887368940
 GameObject:
   m_ObjectHideFlags: 0
@@ -21454,6 +21574,7 @@ GameObject:
   - component: {fileID: 2823090746265294785}
   - component: {fileID: 1587545474317349717}
   - component: {fileID: 8164078558892391857}
+  - component: {fileID: 8164078558892391858}
   m_Layer: 0
   m_Name: Arrow_R3
   m_TagString: RubiksArrows
@@ -21474,6 +21595,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028815, y: 0.051761497, z: 3.3395326}
   m_Center: {x: 0.002801485, y: -0.025881937, z: -0.6697671}
+--- !u!114 &8164078558892391858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558892391856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078558900395593
 GameObject:
   m_ObjectHideFlags: 0
@@ -21746,6 +21881,7 @@ GameObject:
   - component: {fileID: 2823090746079070013}
   - component: {fileID: 1587545474194170793}
   - component: {fileID: 8164078559044857165}
+  - component: {fileID: 8164078559044857166}
   m_Layer: 0
   m_Name: Arrow_R4
   m_TagString: RubiksArrows
@@ -21766,6 +21902,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028815, y: 0.051761437, z: 3.339533}
   m_Center: {x: 0.0028028323, y: -0.025882846, z: -0.6697666}
+--- !u!114 &8164078559044857166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559044857164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559051281096
 GameObject:
   m_ObjectHideFlags: 0
@@ -21796,6 +21946,7 @@ GameObject:
   - component: {fileID: 2823090746069365248}
   - component: {fileID: 1587545474201228948}
   - component: {fileID: 8164078559054534770}
+  - component: {fileID: 8164078559054534771}
   m_Layer: 0
   m_Name: Arrow_R1
   m_TagString: RubiksArrows
@@ -21816,6 +21967,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028815, y: 0.051761437, z: 3.339533}
   m_Center: {x: 0.0028022362, y: -0.025882846, z: -0.6697661}
+--- !u!114 &8164078559054534771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559054534769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559072226054
 GameObject:
   m_ObjectHideFlags: 0
@@ -21944,6 +22109,7 @@ GameObject:
   - component: {fileID: 2823090748166018287}
   - component: {fileID: 1587545475626807419}
   - component: {fileID: 8164078559138987679}
+  - component: {fileID: 8164078559138987680}
   m_Layer: 0
   m_Name: Arrow_U3
   m_TagString: RubiksArrows
@@ -21964,6 +22130,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051760998, z: 3.3395312}
   m_Center: {x: 0.0028005238, y: -0.025880022, z: -0.6697687}
+--- !u!114 &8164078559138987680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559138987678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559152227493
 GameObject:
   m_ObjectHideFlags: 0
@@ -22164,6 +22344,7 @@ GameObject:
   - component: {fileID: 2823090748053339177}
   - component: {fileID: 1587545475446872253}
   - component: {fileID: 8164078559218177625}
+  - component: {fileID: 8164078559218177626}
   m_Layer: 0
   m_Name: Arrow_U4
   m_TagString: RubiksArrows
@@ -22184,6 +22365,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051760998, z: 3.3395312}
   m_Center: {x: 0.0027992125, y: -0.025880499, z: -0.669762}
+--- !u!114 &8164078559218177626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559218177624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559224069547
 GameObject:
   m_ObjectHideFlags: 0
@@ -22438,6 +22633,7 @@ GameObject:
   - component: {fileID: 2823090747958161034}
   - component: {fileID: 1587545475536374302}
   - component: {fileID: 8164078559313315068}
+  - component: {fileID: 8164078559313315069}
   m_Layer: 0
   m_Name: Arrow_R6
   m_TagString: RubiksArrows
@@ -22458,6 +22654,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028813, y: 0.051761422, z: 3.339533}
   m_Center: {x: 0.0027998916, y: -0.025882924, z: -0.6697661}
+--- !u!114 &8164078559313315069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559313315067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559321011068
 GameObject:
   m_ObjectHideFlags: 0
@@ -22612,6 +22822,7 @@ GameObject:
   - component: {fileID: 2823090747964714434}
   - component: {fileID: 1587545475559704918}
   - component: {fileID: 8164078559340316596}
+  - component: {fileID: 8164078559340316597}
   m_Layer: 0
   m_Name: Arrow_U7
   m_TagString: RubiksArrows
@@ -22632,6 +22843,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051760998, z: 3.3395314}
   m_Center: {x: 0.0027988348, y: -0.025880022, z: -0.66975963}
+--- !u!114 &8164078559340316597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559340316595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559344836015
 GameObject:
   m_ObjectHideFlags: 0
@@ -22698,6 +22923,7 @@ GameObject:
   - component: {fileID: 2823090747880274037}
   - component: {fileID: 1587545475882114273}
   - component: {fileID: 8164078559391142405}
+  - component: {fileID: 8164078559391142406}
   m_Layer: 0
   m_Name: Arrow_F9
   m_TagString: RubiksArrows
@@ -22718,6 +22944,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028815, y: 0.051761422, z: 3.3395326}
   m_Center: {x: 0.0028031475, y: -0.025879947, z: -0.6697661}
+--- !u!114 &8164078559391142406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559391142404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559393895093
 GameObject:
   m_ObjectHideFlags: 0
@@ -22810,6 +23050,7 @@ GameObject:
   - component: {fileID: 2823090747861664124}
   - component: {fileID: 1587545475909658088}
   - component: {fileID: 8164078559409777422}
+  - component: {fileID: 8164078559409777423}
   m_Layer: 0
   m_Name: Arrow_F8
   m_TagString: RubiksArrows
@@ -22830,6 +23071,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028815, y: 0.051761422, z: 3.3395326}
   m_Center: {x: 0.0028040416, y: -0.025878994, z: -0.6697661}
+--- !u!114 &8164078559409777423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559409777421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559418568656
 GameObject:
   m_ObjectHideFlags: 0
@@ -23210,6 +23465,7 @@ GameObject:
   - component: {fileID: 2823090747662277069}
   - component: {fileID: 1587545475059891545}
   - component: {fileID: 8164078559642923965}
+  - component: {fileID: 8164078559642923966}
   m_Layer: 0
   m_Name: Arrow_U1
   m_TagString: RubiksArrows
@@ -23230,6 +23486,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051760998, z: 3.3395312}
   m_Center: {x: 0.002800047, y: -0.025880499, z: -0.6697687}
+--- !u!114 &8164078559642923966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559642923964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559646044020
 GameObject:
   m_ObjectHideFlags: 0
@@ -23702,6 +23972,7 @@ GameObject:
   - component: {fileID: 2823090747484638064}
   - component: {fileID: 1587545474932453348}
   - component: {fileID: 8164078559787196674}
+  - component: {fileID: 8164078559787196675}
   m_Layer: 0
   m_Name: Arrow_U8
   m_TagString: RubiksArrows
@@ -23722,6 +23993,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051760998, z: 3.3395314}
   m_Center: {x: 0.002799848, y: -0.025880499, z: -0.6697601}
+--- !u!114 &8164078559787196675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559787196673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559792073703
 GameObject:
   m_ObjectHideFlags: 0
@@ -23894,6 +24179,7 @@ GameObject:
   - component: {fileID: 2823090747416507367}
   - component: {fileID: 1587545475011106675}
   - component: {fileID: 8164078559855368599}
+  - component: {fileID: 8164078559855368600}
   m_Layer: 0
   m_Name: Arrow_U2
   m_TagString: RubiksArrows
@@ -23914,6 +24200,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051760998, z: 3.3395312}
   m_Center: {x: 0.002799719, y: -0.025880022, z: -0.66976917}
+--- !u!114 &8164078559855368600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559855368598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559877665831
 GameObject:
   m_ObjectHideFlags: 0
@@ -24042,6 +24342,7 @@ GameObject:
   - component: {fileID: 2823090747398870268}
   - component: {fileID: 1587545475329159272}
   - component: {fileID: 8164078559906430606}
+  - component: {fileID: 8164078559906430607}
   m_Layer: 0
   m_Name: Arrow_R2
   m_TagString: RubiksArrows
@@ -24062,6 +24363,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028815, y: 0.051761497, z: 3.3395326}
   m_Center: {x: 0.002801496, y: -0.025882414, z: -0.6697671}
+--- !u!114 &8164078559906430607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559906430605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559908837167
 GameObject:
   m_ObjectHideFlags: 0
@@ -24092,6 +24407,7 @@ GameObject:
   - component: {fileID: 2823090747354722383}
   - component: {fileID: 1587545475339654363}
   - component: {fileID: 8164078559916792383}
+  - component: {fileID: 8164078559916792384}
   m_Layer: 0
   m_Name: Arrow_F4
   m_TagString: RubiksArrows
@@ -24112,6 +24428,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028818, y: 0.051761437, z: 3.3395329}
   m_Center: {x: 0.0028015252, y: -0.025880462, z: -0.66976124}
+--- !u!114 &8164078559916792384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559916792382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559927651564
 GameObject:
   m_ObjectHideFlags: 0
@@ -24270,6 +24600,7 @@ GameObject:
   - component: {fileID: 2823090747315329346}
   - component: {fileID: 1587545475380100566}
   - component: {fileID: 8164078559956054836}
+  - component: {fileID: 8164078559956054837}
   m_Layer: 0
   m_Name: Arrow_F1
   m_TagString: RubiksArrows
@@ -24290,6 +24621,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051761024, z: 3.3395326}
   m_Center: {x: 0.0027986164, y: -0.025880504, z: -0.6697661}
+--- !u!114 &8164078559956054837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559956054835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559966757503
 GameObject:
   m_ObjectHideFlags: 0
@@ -24410,6 +24755,7 @@ GameObject:
   - component: {fileID: 2823090747278972274}
   - component: {fileID: 1587545475414913510}
   - component: {fileID: 8164078559992577796}
+  - component: {fileID: 8164078559992577797}
   m_Layer: 0
   m_Name: Arrow_U9
   m_TagString: RubiksArrows
@@ -24430,6 +24776,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0028806, y: 0.051760998, z: 3.3395314}
   m_Center: {x: 0.0028002653, y: -0.025880499, z: -0.66976106}
+--- !u!114 &8164078559992577797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559992577795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cedff26b9d9f4f81f835079b2143b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCursor: {fileID: 2800000, guid: 0cebb675e11b20449b9704f064b63ac8, type: 3}
+  arrowCursor: {fileID: 2800000, guid: aa0b54afeafa9eb429b67bd7fd39816d, type: 3}
 --- !u!1 &8164078559993661970
 GameObject:
   m_ObjectHideFlags: 0

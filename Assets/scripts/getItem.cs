@@ -9,12 +9,11 @@ public class getItem : MonoBehaviour
     [SerializeField] UnityEvent _onEnter = default;
     /// <summary>àÍìxìÆçÏÇµÇΩÇ©Ç«Ç§Ç©</summary>
     bool _isFinished = false;
-    public GameObject Door;
-    private Collider DoorCol;
+
 
     private void Start()
     {
-       DoorCol= Door.GetComponent<BoxCollider>();
+       
     }
 
     private void OnTriggerEnter(Collider other)    
@@ -22,7 +21,7 @@ public class getItem : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             this.gameObject.SetActive(false);
-            DoorCol.isTrigger = true;
+            
             if (!_isFinished)
             {
                 _onEnter.Invoke();
