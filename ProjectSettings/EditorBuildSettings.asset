@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/test2.unity
+    path: 
     guid: bc0ec7ffb492c1a44b038404df6c4010
   - enabled: 1
     path: Assets/Scenes/TitleScene.unity
@@ -14,4 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/masterMiyata.unity
     guid: 1cd9242e39cc614459a26247dce0f74c
+  - enabled: 1
+    path: Assets/Scenes/stage1.unity
+    guid: b6ee4b1931f00b541a885bb04ba61231
+  - enabled: 1
+    path: Assets/Scenes/stage2.unity
+    guid: 79fb54178df6f6d4eb68a4fafeab034a
+  - enabled: 1
+    path: Assets/Scenes/stage3.unity
+    guid: 0ed26a918c5ef8846a148206c49cb3ea
+  - enabled: 1
+    path: Assets/Scenes/tutorialScene.unity
+    guid: d8e6859e489bf3c468abafead1dec0ff
+  - enabled: 1
+    path: Assets/Scenes/SelectScene.unity
+    guid: 0873ed48a06cc014a8f682eedb6674db
   m_configObjects: {}

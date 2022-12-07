@@ -10,17 +10,19 @@ public class Tutorial : MonoBehaviour
     private int tutorialCount;
 
     private float timer;
-    public const float maxTimer = 3;
+    private float maxTimer = 3;
     private bool startTimer;
 
-    public Text countText;
     private GameObject sideCamera;
     public CubeMover cubeMover;
     public CameraSwitcher cameraSwitcher;
     public GameObject player;
+    private Goal goal;
 
     public GameObject wall1;
     public GameObject wall2;
+
+    public Transform tutorialImages;
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +31,11 @@ public class Tutorial : MonoBehaviour
         timer = maxTimer;
 
         sideCamera = GameObject.Find("CameraSide");
+        goal = GameObject.Find("GoalCollider").GetComponent<Goal>();
 
-        if (countText != null)
-        {
-            countText.text = "tutorial : " + tutorialCount;
-        }
         wall1.SetActive(true);
         wall2.SetActive(false);
+        //tutorialImages.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -48,6 +48,7 @@ public class Tutorial : MonoBehaviour
         {
             case 0://最初
                 //プレイヤー操作の画像
+                tutorialImages.Find("tutorialImage1").gameObject.SetActive(true);
 
                 //最初はカメラを上からに固定
                 cameraSwitcher.SetCameraSwitch((int)CameraSwitcher.SwitchName.UP);
@@ -57,11 +58,15 @@ public class Tutorial : MonoBehaviour
                 {
                     startTimer = true;
                 }
-                UpdateCount(1);
+                if (UpdateCount(1))
+                {
+                    tutorialImages.Find("tutorialImage1").gameObject.SetActive(false);
+                }
 
                 break;
             case 1:
                 //TABを推しながら回転してゴールの位置を確認する
+                tutorialImages.Find("tutorialImage2").gameObject.SetActive(true);
 
                 //スペース反応しないようにしたいけど思いつかないからこれでいいや
                 if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.SELECT)
@@ -70,7 +75,7 @@ public class Tutorial : MonoBehaviour
                     cameraSwitcher.SetOldCamera((int)CameraSwitcher.SwitchName.UP);
                 }
 
-                //回転させたら3にする
+                //回転させたら2にする
                 float dis = Vector3.Distance(new Vector3(0, 0, -60), sideCamera.transform.position);
                 if (dis > 7.0f)
                 {
@@ -82,36 +87,46 @@ public class Tutorial : MonoBehaviour
                 {
                     cameraSwitcher.SetCameraSwitch((int)CameraSwitcher.SwitchName.UP);
                     cameraSwitcher.SetOldCamera((int)CameraSwitcher.SwitchName.UP);
+                    tutorialImages.Find("tutorialImage2").gameObject.SetActive(false);
                 }
 
                 break;
             case 2://SPACEで切り替える、矢印押して回す
+                tutorialImages.Find("tutorialImage3").gameObject.SetActive(true);
 
                 //なんでもいいから1つ回そうね
                 //回したら3
                 if (cubeMover.GetIsRotate())
                 {
                     startTimer = true;
+                    maxTimer = 7;
                 }
-                UpdateCount(3);
+                if (UpdateCount(3))
+                {
+                    tutorialImages.Find("tutorialImage3").gameObject.SetActive(false);
+                }
 
 
                 break;
             case 3://プレイヤーが乗ってるブロックは回せない
-
+                tutorialImages.Find("tutorialImage4").gameObject.SetActive(true);
                 //アニメーション？したら
                 startTimer = true;
+
                 if (UpdateCount(4))
                 {
+                    maxTimer = 3;
                     wall1.SetActive(false);
                     wall2.SetActive(true);
+                    tutorialImages.Find("tutorialImage4").gameObject.SetActive(false);
                 }
                 break;
 
 
             case 4://プレイヤーを横のブロックまで移動させる
+                tutorialImages.Find("tutorialImage5").gameObject.SetActive(true);
 
-                   //移動したら
+                //移動したら
                 if (player.GetComponent<PlayerTutorialHitFace>().GetHitFace())
                 {
                     startTimer = true;
@@ -119,25 +134,29 @@ public class Tutorial : MonoBehaviour
                 if (UpdateCount(5))
                 {
                     wall2.SetActive(false);
+                    tutorialImages.Find("tutorialImage5").gameObject.SetActive(false);
                 }
 
                 break;
             case 5://回転させてゴール
+                tutorialImages.Find("tutorialImage6").gameObject.SetActive(true);
 
                 // ゴールしたらNextScene
                 break;
 
-                default:
+            default:
                 Debug.Log("tutorial.cs");
 
                 break;
 
         }
-        countText.text = "tutorial : " + tutorialCount;
 
+        //ゴールしたら
+        if (goal.GetIsGoal())
+        {
+            tutorialImages.Find("tutorialImage6").gameObject.SetActive(false);
+        }
     }
-
-
 
 
     private bool UpdateCount(int nextCount)
@@ -155,5 +174,10 @@ public class Tutorial : MonoBehaviour
             return false;
         }
         return false;
+    }
+
+    public int GettuTorialCount()
+    {
+        return tutorialCount;
     }
 }

@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject _goal;
 
+    public GameObject TitleBotton;
+    public GameObject NextBotton;
+    public GameObject ClearImage;
+
+
     private void Start()
     {
         Application.targetFrameRate = 60;   //60fps
@@ -23,12 +28,17 @@ public class GameManager : MonoBehaviour
         {
             rotateText.text = "残り回数 : " + rotateCount;
         }
+
+
+        if (NextBotton != null) NextBotton.SetActive(false);
+        if (ClearImage != null) ClearImage.SetActive(false);
+        if (TitleBotton != null) TitleBotton.SetActive(false);
     }
 
     void Update()
     {
         //Rキーでリセットする
-        if (Input.GetKey(KeyCode.R) /*&& !_goal.GetComponent<Goal>().GetIsGoal()*/)
+        if (Input.GetKey(KeyCode.R) && !_goal.GetComponent<Goal>().GetIsGoal())
         {
             SceneReset();
         }
@@ -36,6 +46,15 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape) && Input.GetKey(KeyCode.Delete))
         {
             ChangeScene("TitleScene");
+        }
+
+        //ゴールしたら
+        if (_goal.GetComponent<Goal>().GetIsGoal())
+        {
+
+            if (NextBotton != null) NextBotton.SetActive(true);
+            if (ClearImage != null) ClearImage.SetActive(true);
+            if (TitleBotton != null) TitleBotton.SetActive(true);
         }
     }
 

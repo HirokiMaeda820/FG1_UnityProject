@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     /// <summary>É^Å[ÉìÇÃë¨Ç≥</summary>
     [SerializeField] float m_turnSpeed = 3f;
 
+     Vector3 oldPos;
 
     Rigidbody m_rb;
 
@@ -30,14 +31,17 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.UP)
         {
             // controller.enabled = true;
             Move();
+            oldPos = transform.position;
         }
         else
         {
             //controller.enabled = false;
+            transform.position = oldPos;
         }
     }
 

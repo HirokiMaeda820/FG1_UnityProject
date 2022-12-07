@@ -15,15 +15,16 @@ public class SetCursor : MonoBehaviour
     void Update()
     {
 
-        //if (Input.GetMouseButton(0) /*&& !crb.isHittingUI()*/)
-        //{
-        //    Cursor.SetCursor(handCursor, Vector2.zero, CursorMode.Auto);
-        //    Debug.Log("クリック");
-        //}
-        //else if(!Input.GetMouseButtonDown(0))
-        //{
-        //   Cursor.SetCursor(arrowCursor, Vector2.zero, CursorMode.Auto);
-        //}
+        if (Input.GetMouseButton(0) /*&& !crb.isHittingUI()*/)
+        {
+            Cursor.SetCursor(handCursor, Vector2.zero, CursorMode.Auto);
+            //Debug.Log("クリック");
+        }
+        if(Input.GetMouseButtonUp(0))
+        {
+            Cursor.SetCursor(arrowCursor, Vector2.zero, CursorMode.Auto);
+            //Debug.Log("離した");
+        }
 
 
     }
