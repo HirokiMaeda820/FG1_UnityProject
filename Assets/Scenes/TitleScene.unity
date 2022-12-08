@@ -18875,6 +18875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ba45165730277498da1b39257a2c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 2103822548}
   nextScene: SelectScene
 --- !u!1 &2112191263
 GameObject:

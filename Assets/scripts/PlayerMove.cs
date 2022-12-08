@@ -10,7 +10,6 @@ public class PlayerMove : MonoBehaviour
     //public float rotateSpeed = 1.5f;
 
     public CameraSwitcher cameraSwitcher;
-    CharacterController controller;
 
     /// <summary>“®‚­‘¬‚³</summary>
     [SerializeField] float m_movingSpeed = 5f;
@@ -24,7 +23,6 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
         m_rb = GetComponent<Rigidbody>();
     }
 
@@ -34,14 +32,12 @@ public class PlayerMove : MonoBehaviour
 
         if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.UP)
         {
-            // controller.enabled = true;
             Move();
-            oldPos = transform.position;
+            //oldPos = transform.position;
         }
         else
         {
-            //controller.enabled = false;
-            transform.position = oldPos;
+            //transform.position = oldPos;
         }
     }
 

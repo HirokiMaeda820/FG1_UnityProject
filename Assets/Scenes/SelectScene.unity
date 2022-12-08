@@ -365,7 +365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132855672}
   m_LocalRotation: {x: -0, y: -0.23720102, z: -0, w: 0.97146064}
-  m_LocalPosition: {x: 1.0599842, y: 0, z: -2.0411835}
+  m_LocalPosition: {x: 1.0599842, y: 0.07999992, z: -2.0411835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1114,7 +1114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: 0}
+  m_AnchoredPosition: {x: 500, y: -70}
   m_SizeDelta: {x: 200, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255224968
@@ -1846,7 +1846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473722223}
   m_LocalRotation: {x: 0, y: 0.45715117, z: 0, w: 0.88938904}
-  m_LocalPosition: {x: -38.500294, y: -6.4518576, z: 28.43711}
+  m_LocalPosition: {x: -38.500294, y: -6.3718576, z: 28.43711}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1962,7 +1962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547942252}
   m_LocalRotation: {x: -0, y: 0.6083874, z: -0, w: 0.79364014}
-  m_LocalPosition: {x: -41.681484, y: -6.46, z: 29.657911}
+  m_LocalPosition: {x: -41.681484, y: -6.3, z: 29.657911}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2188,7 +2188,7 @@ GameObject:
   - component: {fileID: 676299140}
   m_Layer: 0
   m_Name: FaceFront
-  m_TagString: Untagged
+  m_TagString: select3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2285,7 +2285,7 @@ GameObject:
   - component: {fileID: 679671884}
   m_Layer: 0
   m_Name: FaceFront
-  m_TagString: Untagged
+  m_TagString: select2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3137,7 +3137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -500, y: 0}
+  m_AnchoredPosition: {x: -500, y: -70}
   m_SizeDelta: {x: 200, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999832493
@@ -3248,7 +3248,7 @@ GameObject:
   - component: {fileID: 1066771912}
   m_Layer: 0
   m_Name: FaceFront
-  m_TagString: Untagged
+  m_TagString: select4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3707,7 +3707,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126165387}
   m_LocalRotation: {x: -0, y: 0.24589428, z: -0, w: 0.9692967}
-  m_LocalPosition: {x: 0.093616486, y: 0, z: -3.071865}
+  m_LocalPosition: {x: 0.093616486, y: 0.08, z: -3.071865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4273,7 +4273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219330393}
   m_LocalRotation: {x: -0, y: -0.476594, z: -0, w: 0.87912357}
-  m_LocalPosition: {x: 4.223978, y: -0.006152153, z: -0.5477619}
+  m_LocalPosition: {x: 4.223978, y: 0.07384777, z: -0.5477619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5336,7 +5336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640767529}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4699974, y: 0, z: -2.795}
+  m_LocalPosition: {x: 1.4699974, y: 0.07999992, z: -2.795}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5694,7 +5694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802160543}
   m_LocalRotation: {x: -0, y: 0.45715117, z: -0, w: 0.88938904}
-  m_LocalPosition: {x: -41.433353, y: -6.418, z: 28.226217}
+  m_LocalPosition: {x: -41.433353, y: -6.2580004, z: 28.226217}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6256,7 +6256,7 @@ GameObject:
   - component: {fileID: 2066722114}
   m_Layer: 0
   m_Name: FaceFront
-  m_TagString: Untagged
+  m_TagString: select5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

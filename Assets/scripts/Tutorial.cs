@@ -21,6 +21,7 @@ public class Tutorial : MonoBehaviour
 
     public GameObject wall1;
     public GameObject wall2;
+    public GameObject aka;
 
     public Transform tutorialImages;
 
@@ -35,6 +36,7 @@ public class Tutorial : MonoBehaviour
 
         wall1.SetActive(true);
         wall2.SetActive(false);
+        aka.SetActive(false);
         //tutorialImages.gameObject.SetActive(true);
     }
 
@@ -104,6 +106,8 @@ public class Tutorial : MonoBehaviour
                 if (UpdateCount(3))
                 {
                     tutorialImages.Find("tutorialImage3").gameObject.SetActive(false);
+                    maxTimer = 3;
+                    aka.SetActive(true);
                 }
 
 
@@ -115,9 +119,10 @@ public class Tutorial : MonoBehaviour
 
                 if (UpdateCount(4))
                 {
-                    maxTimer = 3;
+
                     wall1.SetActive(false);
                     wall2.SetActive(true);
+                    aka.SetActive(false);
                     tutorialImages.Find("tutorialImage4").gameObject.SetActive(false);
                 }
                 break;

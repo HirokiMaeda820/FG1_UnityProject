@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class TitleSceneManager : MonoBehaviour
 {
-    GameManager gameManager;
+   public GameManager gameManager;
     public string nextScene;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -18,7 +17,7 @@ public class TitleSceneManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            gameManager.ChangeScene("nextScene");
+            gameManager.ChangeScene(nextScene);
         }
     }
 }
