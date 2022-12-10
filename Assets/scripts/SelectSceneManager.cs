@@ -30,7 +30,7 @@ public class SelectSceneManager : MonoBehaviour
     {
         isStart = false;
         selectCount = 5;
-        startTimer = 180;
+        startTimer = 120;
         arrowTimer = 0;
         camera5.MoveToTopOfPrioritySubqueue();
 
@@ -52,7 +52,7 @@ public class SelectSceneManager : MonoBehaviour
         {
             startTimer--;
 
-            selectCount = (int)startTimer / 30;
+            selectCount = (int)startTimer / 20;
 
             if (selectCount <= 0)
             {

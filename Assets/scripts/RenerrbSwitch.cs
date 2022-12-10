@@ -15,6 +15,8 @@ public class RenerrbSwitch : MonoBehaviour
 
         _goal = GameObject.Find("GoalCollider").GetComponent<Goal>();
 
+        rb.isKinematic = true;
+
         if (this.transform.tag == "CenterCube")
         {
             this.gameObject.SetActive(true);

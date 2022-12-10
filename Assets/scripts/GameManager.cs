@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public GameObject NextBotton;
     public GameObject ClearImage;
 
+   // public GameObject canvas;
+  // private Menu pause;
 
     private void Start()
     {
@@ -26,9 +28,11 @@ public class GameManager : MonoBehaviour
         rotateCount = rotateCountMax;
         if (rotateText != null)
         {
-            rotateText.text = "残り回数 : " + rotateCount;
+            rotateText.text = "残り回数:" + rotateCount;
         }
 
+        // pause = canvas.GetComponent<Menu>();
+        Time.timeScale = 1;
 
         if (NextBotton != null) NextBotton.SetActive(false);
         if (ClearImage != null) ClearImage.SetActive(false);
@@ -47,6 +51,12 @@ public class GameManager : MonoBehaviour
         {
             ChangeScene("TitleScene");
         }
+
+        ////ポース画面のとき
+        //if (pause.GetIsPause())
+        //{
+
+        //}
 
         //ゴールしたら
         if (_goal.GetComponent<Goal>().GetIsGoal())
@@ -71,7 +81,7 @@ public class GameManager : MonoBehaviour
     public void subRotateCount()
     {
         rotateCount = rotateCount - 1;
-        rotateText.text = "残り回数 : " + rotateCount;
+        rotateText.text = "残り回数:" + rotateCount;
     }
 
     public int RotateCount()

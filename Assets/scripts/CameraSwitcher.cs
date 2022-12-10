@@ -33,6 +33,11 @@ public class CameraSwitcher : MonoBehaviour
     public GameObject icon_Rotate;
     public GameObject icon_select;
 
+    public GameObject countText;
+
+    public RectTransform menuBotton;
+    public RectTransform resetBotton;
+
     public enum SwitchName
     {
         UP = 0,
@@ -52,6 +57,10 @@ public class CameraSwitcher : MonoBehaviour
         _goal = GameObject.Find("GoalCollider").GetComponent<Goal>();
 
         _frameImage.SetActive(false);
+
+        countText.SetActive(false);
+
+        resetBotton.gameObject.SetActive(true);
 
         _playerCamera.MoveToTopOfPrioritySubqueue();
         //_upCamera.MoveToTopOfPrioritySubqueue();
@@ -124,6 +133,11 @@ public class CameraSwitcher : MonoBehaviour
             icon_player.SetActive(true);
             icon_Rotate.SetActive(false);
             icon_select.SetActive(false);
+
+            countText.SetActive(false);
+            resetBotton.anchoredPosition = new Vector2(782, -465);
+            menuBotton.anchoredPosition = new Vector2(889, -465);
+
         }
         //見回す時
         else if (cameraSwitch == (int)SwitchName.SIDE)
@@ -137,6 +151,11 @@ public class CameraSwitcher : MonoBehaviour
             icon_player.SetActive(false);
             icon_Rotate.SetActive(true);
             icon_select.SetActive(false);
+
+            countText.SetActive(false);
+
+            resetBotton.anchoredPosition = new Vector2(712, -422);
+            menuBotton.anchoredPosition = new Vector2(823, -422);
         }
         //キューブ回すとき
         else if (cameraSwitch == (int)SwitchName.SELECT)
@@ -151,6 +170,11 @@ public class CameraSwitcher : MonoBehaviour
             icon_player.SetActive(false);
             icon_Rotate.SetActive(false);
             icon_select.SetActive(true);
+
+            countText.SetActive(true);
+
+            resetBotton.anchoredPosition = new Vector2(712, -422);
+            menuBotton.anchoredPosition = new Vector2(823, -422);
         }
 
         //ゴールしてたら斜め上から見る
@@ -167,6 +191,8 @@ public class CameraSwitcher : MonoBehaviour
             icon_select.SetActive(false);
 
             _rubikArrows.gameObject.SetActive(false);
+
+            resetBotton.gameObject.SetActive(false);
         }
     }
 

@@ -10,55 +10,47 @@ public class PlayerMove : MonoBehaviour
     //public float rotateSpeed = 1.5f;
 
     public CameraSwitcher cameraSwitcher;
+    CharacterController controller;
 
     /// <summary>動く速さ</summary>
     [SerializeField] float m_movingSpeed = 5f;
     /// <summary>ターンの速さ</summary>
     [SerializeField] float m_turnSpeed = 3f;
 
-     Vector3 oldPos;
 
     Rigidbody m_rb;
+    Animator anime_;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        controller = GetComponent<CharacterController>();
         m_rb = GetComponent<Rigidbody>();
+        anime_ = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.UP)
-        {
-            Move();
-            //oldPos = transform.position;
-        }
-        else
-        {
-            //transform.position = oldPos;
-        }
+        Move();
     }
 
     void Move()
     {
-        //CharacterController controller = GetComponent<CharacterController>();
+        float v = 0; float h = 0;
 
-        //// Rotate around y - axis
-        //transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);
+        if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.UP)
 
-        //// Move forward / backward
-        //Vector3 forward = transform.TransformDirection(Vector3.forward);
-        //float curSpeed = speed * Input.GetAxis("Vertical");
-        //controller.SimpleMove(forward * curSpeed);
+        {
+            // 方向の入力を取得し、方向を求める
+            v = Input.GetAxisRaw("Vertical");
+            h = Input.GetAxisRaw("Horizontal");
 
+            //if (v != 0 || h != 0) anime_.SetBool("walk", true);
+            //else anime_.SetBool("walk", false);
 
-        // 方向の入力を取得し、方向を求める
-        float v = Input.GetAxisRaw("Vertical");
-        float h = Input.GetAxisRaw("Horizontal");
-
-
+        }
         // 入力方向のベクトルを組み立てる
         Vector3 dir = Vector3.forward * v + Vector3.right * h;
 
@@ -76,18 +68,27 @@ public class PlayerMove : MonoBehaviour
                 // メインカメラを基準に入力方向のベクトルを変換する
                 dir.y = 0;  // y 軸方向はゼロにして水平方向のベクトルにする
             }
-
-
-
             // 入力方向に滑らかに回転させる
             Quaternion targetRotation = Quaternion.LookRotation(dir);
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, targetRotation, Time.deltaTime * m_turnSpeed);
 
-
             Vector3 velo = dir.normalized * m_movingSpeed; // 入力した方向に移動する
-            velo.y = m_rb.velocity.y;   // ジャンプした時の y 軸方向の速度を保持する
+            //if (velo != Vector3.zero) transform.Rotate(new Vector3(0, 90, 0));
+
             m_rb.velocity = velo;   // 計算した速度ベクトルをセットする
         }
-
+        //もしキーを押したらアニメーター.setbool("walk",true);を変える
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            anime_.SetBool("walk", true);
+        }
+        //else
+        //{
+        //    anime_.SetBool("walk", false);
+        //}
+        else if (!Input.anyKey)
+        {
+            anime_.SetBool("walk", false);
+        }
     }
 }
