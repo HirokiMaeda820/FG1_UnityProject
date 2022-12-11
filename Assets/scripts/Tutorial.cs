@@ -22,6 +22,7 @@ public class Tutorial : MonoBehaviour
     public GameObject wall1;
     public GameObject wall2;
     public GameObject aka;
+    public GameObject yuka;
 
     public Transform tutorialImages;
 
@@ -38,6 +39,7 @@ public class Tutorial : MonoBehaviour
         wall2.SetActive(false);
         aka.SetActive(false);
         //tutorialImages.gameObject.SetActive(true);
+        yuka.SetActive(false);
     }
 
     // Update is called once per frame
@@ -124,6 +126,7 @@ public class Tutorial : MonoBehaviour
                     wall2.SetActive(true);
                     aka.SetActive(false);
                     tutorialImages.Find("tutorialImage4").gameObject.SetActive(false);
+                    yuka.SetActive(true);
                 }
                 break;
 
@@ -138,6 +141,7 @@ public class Tutorial : MonoBehaviour
                 }
                 if (UpdateCount(5))
                 {
+                    yuka.SetActive(false);
                     wall2.SetActive(false);
                     tutorialImages.Find("tutorialImage5").gameObject.SetActive(false);
                 }

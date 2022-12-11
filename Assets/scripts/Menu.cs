@@ -8,7 +8,13 @@ public class Menu : MonoBehaviour
     [SerializeField] private Button resumeButton;
     [SerializeField] private GameObject commander;
 
+    [SerializeField] private GameObject sousaImg;
+    [SerializeField] private Button sousaButton;
+    [SerializeField] private Button sousamodoru;
+   
+
     private bool isPause = false;
+    private bool isSousa = false;
 
     void Start()
     {
@@ -18,6 +24,14 @@ public class Menu : MonoBehaviour
 
         pauseButton.gameObject.SetActive(true);
         resumeButton.gameObject.SetActive(false);
+
+        sousaButton.onClick.AddListener(Sousa);
+        sousamodoru.onClick.AddListener(SousaModoru);
+
+        sousaButton.gameObject.SetActive(true);
+        sousaImg.gameObject.SetActive(false);
+        sousamodoru.gameObject.SetActive(false);
+
         commander.SetActive(true);
         isPause = false;
     }
@@ -38,8 +52,22 @@ public class Menu : MonoBehaviour
             pauseButton.gameObject.SetActive(false);
             resumeButton.gameObject.SetActive(true);
             commander.SetActive(false);
+
+            if (isSousa)
+            {
+                sousaImg.gameObject.SetActive(true);
+                sousamodoru.gameObject.SetActive(true);
+                sousaButton.gameObject.SetActive(false);
+            }
+            else if(!isSousa)
+            {
+                sousaImg.gameObject.SetActive(false);
+                sousamodoru.gameObject.SetActive(false);
+                sousaButton.gameObject.SetActive(true);
+            }
+
         }
-        // 再開
+        //ポーズしてないとき
         else if (!isPause)
         {
             Time.timeScale = 1;
@@ -47,6 +75,10 @@ public class Menu : MonoBehaviour
             pauseButton.gameObject.SetActive(true);
             resumeButton.gameObject.SetActive(false);
             commander.SetActive(true);
+
+            sousaImg.gameObject.SetActive(false);
+            sousamodoru.gameObject.SetActive(false);
+            isSousa = false;
         }
 
     }
@@ -61,6 +93,19 @@ public class Menu : MonoBehaviour
     {
         isPause = false;
     }
+
+    private void Sousa()
+    {
+        isSousa = true;
+    }
+
+    private void SousaModoru()
+    {
+        isSousa= false;
+    }
+
+    //private void
+
     public bool GetIsPause()
     {
         return isPause;
