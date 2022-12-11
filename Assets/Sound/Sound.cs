@@ -5,21 +5,36 @@ using UnityEngine;
 public class Sound : MonoBehaviour
 {
 
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip audioClip;
+    //[SerializeField] GameObject text;
+    private bool isAudioEnd;
 
-    public AudioClip _sound;//音楽ファイルを指定
-    private AudioSource _audioSource;
-    // Start is called before the first frame update
     void Start()
     {
-        _audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        isAudioEnd = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            _audioSource.PlayOneShot(_sound);
+            audioSource.PlayOneShot(audioClip);
+            isAudioEnd = true;
         }
+        if (!audioSource.isPlaying && isAudioEnd)
+        {
+           // text.SetActive(true);
+        }
+        else
+        {
+           // text.SetActive(false);
+        }
+    }
+
+    public void OnClick()
+    {
+        audioSource.PlayOneShot(audioClip);
     }
 }

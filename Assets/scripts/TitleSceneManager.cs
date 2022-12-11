@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TitleSceneManager : MonoBehaviour
 {
-   public GameManager gameManager;
+    public GameManager gameManager;
     public string nextScene;
 
     // Start is called before the first frame update

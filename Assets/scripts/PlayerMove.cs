@@ -47,10 +47,15 @@ public class PlayerMove : MonoBehaviour
             v = Input.GetAxisRaw("Vertical");
             h = Input.GetAxisRaw("Horizontal");
 
-            //if (v != 0 || h != 0) anime_.SetBool("walk", true);
-            //else anime_.SetBool("walk", false);
+            if (v != 0 || h != 0) anime_.SetBool("walk", true);
+            else anime_.SetBool("walk", false);
 
         }
+        else
+        {
+            anime_.SetBool("walk", false);
+        }
+        
         // 入力方向のベクトルを組み立てる
         Vector3 dir = Vector3.forward * v + Vector3.right * h;
 
@@ -77,18 +82,6 @@ public class PlayerMove : MonoBehaviour
 
             m_rb.velocity = velo;   // 計算した速度ベクトルをセットする
         }
-        //もしキーを押したらアニメーター.setbool("walk",true);を変える
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-        {
-            anime_.SetBool("walk", true);
-        }
-        //else
-        //{
-        //    anime_.SetBool("walk", false);
-        //}
-        else if (!Input.anyKey)
-        {
-            anime_.SetBool("walk", false);
-        }
+
     }
 }

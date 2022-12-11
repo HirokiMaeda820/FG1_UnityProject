@@ -22,7 +22,11 @@ public class SelectSceneManager : MonoBehaviour
     [SerializeField] CinemachineVirtualCameraBase camera2;
     [SerializeField] CinemachineVirtualCameraBase camera3;
     [SerializeField] CinemachineVirtualCameraBase camera4;
-    [SerializeField] CinemachineVirtualCameraBase camera5;
+   // [SerializeField] CinemachineVirtualCameraBase camera5;
+
+    AudioSource audioSource;
+    public AudioClip ketteiAudio;
+    public AudioClip arrpwAudio;
 
     // Start is called before the first frame update
 
@@ -30,12 +34,14 @@ public class SelectSceneManager : MonoBehaviour
     {
         isStart = false;
         selectCount = 5;
-        startTimer = 120;
+        startTimer = 100;
         arrowTimer = 0;
-        camera5.MoveToTopOfPrioritySubqueue();
+        camera4.MoveToTopOfPrioritySubqueue();
 
         leftArrow.SetActive(false);
         rightArrow.SetActive(false);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,6 +60,7 @@ public class SelectSceneManager : MonoBehaviour
 
             selectCount = (int)startTimer / 20;
 
+            //audioSource.Play();
             if (selectCount <= 0)
             {
                 arrowTimer += Time.deltaTime;
@@ -75,22 +82,24 @@ public class SelectSceneManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             {
                 selectCount--;
+                audioSource.PlayOneShot(arrpwAudio);
             }
             if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             {
                 selectCount++;
+                audioSource.PlayOneShot(arrpwAudio);
             }
         }
 
-        if (selectCount < 0) selectCount = 5;
-        if (selectCount > 5) selectCount = 0;
+        if (selectCount < 0) selectCount = 4;
+        if (selectCount > 4) selectCount = 0;
 
         if (selectCount == 0) camera0.MoveToTopOfPrioritySubqueue();
         if (selectCount == 1) camera1.MoveToTopOfPrioritySubqueue();
         if (selectCount == 2) camera2.MoveToTopOfPrioritySubqueue();
         if (selectCount == 3) camera3.MoveToTopOfPrioritySubqueue();
         if (selectCount == 4) camera4.MoveToTopOfPrioritySubqueue();
-        if (selectCount == 5) camera5.MoveToTopOfPrioritySubqueue();
+        //if (selectCount == 5) camera5.MoveToTopOfPrioritySubqueue();
 
     }
 
@@ -107,12 +116,12 @@ public class SelectSceneManager : MonoBehaviour
             //マウスクリックした場所からRayを飛ばし、オブジェクトがあればtrue 
             if (Physics.Raycast(ray.origin, ray.direction, out hit, Mathf.Infinity))
             {
-                     if (hit.collider.gameObject.CompareTag("select0")) gameManager.ChangeScene("tutorialScene");
-                else if (hit.collider.gameObject.CompareTag("select1")) gameManager.ChangeScene("stage1");
-                else if (hit.collider.gameObject.CompareTag("select2")) gameManager.ChangeScene("stage2");
-                else if (hit.collider.gameObject.CompareTag("select3")) gameManager.ChangeScene("stage3");
-                else if (hit.collider.gameObject.CompareTag("select4")) gameManager.ChangeScene("masterMiyata");
-                else if (hit.collider.gameObject.CompareTag("select5")) gameManager.ChangeScene("masterMiyata");
+                if (hit.collider.gameObject.CompareTag("select0"))      { gameManager.ChangeScene("tutorialScene"); audioSource.PlayOneShot(ketteiAudio); }
+                else if (hit.collider.gameObject.CompareTag("select1")) { gameManager.ChangeScene("stage1"); audioSource.PlayOneShot(ketteiAudio); }
+                else if (hit.collider.gameObject.CompareTag("select2")) { gameManager.ChangeScene("stage2"); audioSource.PlayOneShot(ketteiAudio); }
+                else if (hit.collider.gameObject.CompareTag("select3")) { gameManager.ChangeScene("stage3"); audioSource.PlayOneShot(ketteiAudio); }
+                else if (hit.collider.gameObject.CompareTag("select4")) { gameManager.ChangeScene("stage4"); audioSource.PlayOneShot(ketteiAudio); }
+                //else if (hit.collider.gameObject.CompareTag("select5")) { gameManager.ChangeScene("masterMiyata"); audioSource.PlayOneShot(ketteiAudio); }
 
             }
         }
@@ -121,9 +130,11 @@ public class SelectSceneManager : MonoBehaviour
     public void RightButton()
     {
         selectCount++;
+        audioSource.PlayOneShot(arrpwAudio);
     }
     public void LeftBotton()
     {
         selectCount--;
+        audioSource.PlayOneShot(arrpwAudio);
     }
 }

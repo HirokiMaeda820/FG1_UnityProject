@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject ClearImage;
 
    // public GameObject canvas;
-  // private Menu pause;
+   // private Menu pause;
 
     private void Start()
     {

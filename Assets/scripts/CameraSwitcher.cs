@@ -70,8 +70,7 @@ public class CameraSwitcher : MonoBehaviour
     private void Update()
     {
         //スペース押したら選択モード
-        if (Input.GetKeyDown(KeyCode.Space) && cameraSwitch != (int)SwitchName.SELECT
-            && _gameManager.RotateCount() >= 1) //回せる回数が1以上の時
+        if (Input.GetKeyDown(KeyCode.Space) && cameraSwitch != (int)SwitchName.SELECT ) 
         {
             cameraSwitch = (int)SwitchName.SELECT;
             oldCamera = (int)SwitchName.SELECT;

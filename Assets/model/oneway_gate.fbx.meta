@@ -1,17 +1,8 @@
 fileFormatVersion: 2
-guid: 299d5626f4cf4a04ca76333152c27e71
+guid: cf9523f519c28a14f84592d977a2ac4a
 ModelImporter:
   serializedVersion: 22103
-  internalIDToNameTable:
-  - first:
-      74: 4336723845255883404
-    second: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|idle"
-  - first:
-      74: 208706014261937020
-    second: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|idle2"
-  - first:
-      74: -6287070426831720324
-    second: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|walkiii"
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2

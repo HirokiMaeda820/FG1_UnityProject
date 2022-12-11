@@ -22,7 +22,8 @@ public class FadeDoor : MonoBehaviour
         red = fenceRenderer.material.color.r;
         green = fenceRenderer.material.color.g;
         bule = fenceRenderer.material.color.b;
-        alfa = fenceRenderer.material.color.a; 
+        alfa = fenceRenderer.material.color.a;
+        this.gameObject.SetActive(true);
     }
 
 
@@ -44,8 +45,9 @@ public class FadeDoor : MonoBehaviour
         if (alfa <= 0)              // 完全に透明になったら処理を抜ける
         {
             isFadeOut = false;     // boolのチェックが外れる
-            fenceRenderer.enabled = false;  // Materialの描画をオフにする
-            fenceCollider.enabled = false;
+            //fenceRenderer.enabled = false;  // Materialの描画をオフにする
+            //fenceCollider.enabled = false;
+            this.gameObject.SetActive(false);
         }
         Debug.Log("消えた");
     }
