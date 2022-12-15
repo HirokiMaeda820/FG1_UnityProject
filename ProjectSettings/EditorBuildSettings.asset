@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScene.unity
     guid: fd2e5e8c53a57874fb0fd0dd5b0b8097
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/masterMiyata.unity
     guid: 1cd9242e39cc614459a26247dce0f74c
   - enabled: 1

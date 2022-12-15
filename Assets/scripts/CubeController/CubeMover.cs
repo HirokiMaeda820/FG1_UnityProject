@@ -56,6 +56,7 @@ public class CubeMover : MonoBehaviour
                     Destroy(root.gameObject);
                     root = null;
                     shouldDestroy = false;
+                    player.transform.parent = null;
                 }
             }
             else
