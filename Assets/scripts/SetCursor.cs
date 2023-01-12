@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SetCursor : MonoBehaviour
 {
+
+    public CameraSwitcher cameraSwitcher;
+    public Menu menu;
+    public GameObject _goal;
+
     public Texture2D handCursor;
     public Texture2D arrowCursor;
 
@@ -20,13 +25,27 @@ public class SetCursor : MonoBehaviour
             Cursor.SetCursor(handCursor, Vector2.zero, CursorMode.Auto);
             //Debug.Log("クリック");
         }
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
             Cursor.SetCursor(arrowCursor, Vector2.zero, CursorMode.Auto);
             //Debug.Log("離した");
         }
 
-
+        if (cameraSwitcher != null || menu != null)
+        {
+            if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.UP)
+            {
+                Cursor.visible = menu.GetIsPause();
+            }
+            else
+            {
+                Cursor.visible = true;
+            }
+            if (_goal.GetComponent<Goal>().GetIsGoal())//クリアしたらカーソル出す
+            {
+                Cursor.visible = true;
+            }
+        }
     }
     void OnMouseOver()
     {

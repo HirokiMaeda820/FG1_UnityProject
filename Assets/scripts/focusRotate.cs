@@ -1,23 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class focusRotate : MonoBehaviour
 {
     public GameObject Object;　//フォーカスするオブジェクト
-    public Vector2 rotationSpeed;
-    public bool reverse;
+    static private Vector2 rotationSpeed = new Vector2(0.1f, 0.1f);
+    private bool reverse = true;
 
     public CameraSwitcher cameraSwitcher;
     private Vector2 lastMousePosition;
 
     bool sideCameraReset;
+    private Slider slider;
 
     void Start()
     {
         //Camera = Camera.main;
         // Camera = GameObject.Find("CameraSide");
         sideCameraReset = false;
+        slider = GameObject.Find("kandoSlider").GetComponent<Slider>();
+        slider.value = rotationSpeed.x;
     }
 
     void Update()
@@ -82,4 +86,12 @@ public class focusRotate : MonoBehaviour
             }
         }
     }
+
+    public void changeSpeed()
+    {
+        rotationSpeed.x = slider.value;
+        rotationSpeed.y = slider.value;
+        Debug.Log(slider.value);
+    }
+
 }

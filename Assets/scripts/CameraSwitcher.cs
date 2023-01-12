@@ -12,7 +12,8 @@ public class CameraSwitcher : MonoBehaviour
 
     [SerializeField] GameObject _upCamera;
     [SerializeField] CinemachineVirtualCameraBase _sideCamera;
-    [SerializeField] CinemachineVirtualCameraBase _playerCamera;
+    [SerializeField] CinemachineVirtualCameraBase _playerFreeLookCamera;
+    [SerializeField] CinemachineVirtualCameraBase _playerFollowCamera;
 
     [SerializeField] CinemachineVirtualCameraBase _selectCamera;
 
@@ -38,6 +39,8 @@ public class CameraSwitcher : MonoBehaviour
     public RectTransform menuBotton;
     public RectTransform resetBotton;
 
+    static private bool playerMode = false;//false:FreeLook trur:Follow
+
     public enum SwitchName
     {
         UP = 0,
@@ -62,7 +65,7 @@ public class CameraSwitcher : MonoBehaviour
 
         resetBotton.gameObject.SetActive(true);
 
-        _playerCamera.MoveToTopOfPrioritySubqueue();
+        _playerFreeLookCamera.MoveToTopOfPrioritySubqueue();
         //_upCamera.MoveToTopOfPrioritySubqueue();
 
     }
@@ -70,7 +73,7 @@ public class CameraSwitcher : MonoBehaviour
     private void Update()
     {
         //スペース押したら選択モード
-        if (Input.GetKeyDown(KeyCode.Space) && cameraSwitch != (int)SwitchName.SELECT ) 
+        if (Input.GetKeyDown(KeyCode.Space) && cameraSwitch != (int)SwitchName.SELECT)
         {
             cameraSwitch = (int)SwitchName.SELECT;
             oldCamera = (int)SwitchName.SELECT;
@@ -101,27 +104,21 @@ public class CameraSwitcher : MonoBehaviour
         }
     }
 
-    public int CameraSwitch()
-    {
-        return cameraSwitch;
-    }
-    public void SetCameraSwitch(int switchNum)
-    {
-        cameraSwitch = switchNum;
-    }
-
-    public void SetOldCamera(int oldNum)
-    {
-        oldCamera = oldNum;
-    }
-
 
     public void CameraSetting()
     {
         //プレイヤーの時
         if (CameraSwitch() == (int)SwitchName.UP)
         {
-            _playerCamera.MoveToTopOfPrioritySubqueue();
+            if (playerMode == false)
+            {
+                _playerFreeLookCamera.MoveToTopOfPrioritySubqueue();
+            }
+            else if (playerMode == true)
+            {
+                _playerFollowCamera.MoveToTopOfPrioritySubqueue();
+            }
+
 
             _upCamera.SetActive(true);
             //  _player.SetActive(true);
@@ -195,6 +192,30 @@ public class CameraSwitcher : MonoBehaviour
         }
     }
 
+    public int CameraSwitch()
+    {
+        return cameraSwitch;
+    }
+    public void SetCameraSwitch(int switchNum)
+    {
+        cameraSwitch = switchNum;
+    }
+
+    public void SetOldCamera(int oldNum)
+    {
+        oldCamera = oldNum;
+    }
+
+
+    public void ChengePlayerMode1()
+    {
+        playerMode = false;
+    }
+
+    public void ChengePlayerMode2()
+    {
+        playerMode = true;
+    }
 
 
 }

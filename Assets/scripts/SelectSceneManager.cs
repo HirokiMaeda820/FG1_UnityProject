@@ -22,7 +22,7 @@ public class SelectSceneManager : MonoBehaviour
     [SerializeField] CinemachineVirtualCameraBase camera2;
     [SerializeField] CinemachineVirtualCameraBase camera3;
     [SerializeField] CinemachineVirtualCameraBase camera4;
-   // [SerializeField] CinemachineVirtualCameraBase camera5;
+    // [SerializeField] CinemachineVirtualCameraBase camera5;
 
     AudioSource audioSource;
     public AudioClip ketteiAudio;
@@ -101,6 +101,14 @@ public class SelectSceneManager : MonoBehaviour
         if (selectCount == 4) camera4.MoveToTopOfPrioritySubqueue();
         //if (selectCount == 5) camera5.MoveToTopOfPrioritySubqueue();
 
+        //選択
+        if (Input.GetKeyDown(KeyCode.Space)){
+            if (selectCount == 0) { gameManager.ChangeScene("tutorialScene"); audioSource.PlayOneShot(ketteiAudio); }
+            else if (selectCount == 1) { gameManager.ChangeScene("stage1"); audioSource.PlayOneShot(ketteiAudio); }
+            else if (selectCount == 2) { gameManager.ChangeScene("stage2"); audioSource.PlayOneShot(ketteiAudio); }
+            else if (selectCount == 3) { gameManager.ChangeScene("stage3"); audioSource.PlayOneShot(ketteiAudio); }
+            else if (selectCount == 4) { gameManager.ChangeScene("stage4"); audioSource.PlayOneShot(ketteiAudio); }
+        }
     }
 
     private void ClickSelect()
@@ -116,7 +124,7 @@ public class SelectSceneManager : MonoBehaviour
             //マウスクリックした場所からRayを飛ばし、オブジェクトがあればtrue 
             if (Physics.Raycast(ray.origin, ray.direction, out hit, Mathf.Infinity))
             {
-                if (hit.collider.gameObject.CompareTag("select0"))      { gameManager.ChangeScene("tutorialScene"); audioSource.PlayOneShot(ketteiAudio); }
+                if (hit.collider.gameObject.CompareTag("select0")) { gameManager.ChangeScene("tutorialScene"); audioSource.PlayOneShot(ketteiAudio); }
                 else if (hit.collider.gameObject.CompareTag("select1")) { gameManager.ChangeScene("stage1"); audioSource.PlayOneShot(ketteiAudio); }
                 else if (hit.collider.gameObject.CompareTag("select2")) { gameManager.ChangeScene("stage2"); audioSource.PlayOneShot(ketteiAudio); }
                 else if (hit.collider.gameObject.CompareTag("select3")) { gameManager.ChangeScene("stage3"); audioSource.PlayOneShot(ketteiAudio); }

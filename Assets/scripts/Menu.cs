@@ -8,13 +8,15 @@ public class Menu : MonoBehaviour
     [SerializeField] private Button resumeButton;
     [SerializeField] private GameObject commander;
 
-    [SerializeField] private GameObject sousaImg;
     [SerializeField] private Button sousaButton;
-    [SerializeField] private Button sousamodoru;
-   
+    [SerializeField] private Button settingButton;
 
+    [SerializeField] private GameObject menuPanel;
+    [SerializeField] private GameObject sousaPanel;
+    [SerializeField] private GameObject settingPanel;
+
+    private int menuNum = 0;//0:無 1:設定 2:操作説明
     private bool isPause = false;
-    private bool isSousa = false;
 
     void Start()
     {
@@ -23,14 +25,13 @@ public class Menu : MonoBehaviour
         resumeButton.onClick.AddListener(Resume);
 
         pauseButton.gameObject.SetActive(true);
-        resumeButton.gameObject.SetActive(false);
-
+        
         sousaButton.onClick.AddListener(Sousa);
-        sousamodoru.onClick.AddListener(SousaModoru);
+        settingButton.onClick.AddListener(Setting);
+        //メニューに戻る系はinspectorから
 
         sousaButton.gameObject.SetActive(true);
-        sousaImg.gameObject.SetActive(false);
-        sousamodoru.gameObject.SetActive(false);
+       
 
         commander.SetActive(true);
         isPause = false;
@@ -48,23 +49,29 @@ public class Menu : MonoBehaviour
         if (isPause)
         {
             Time.timeScale = 0;  // 時間停止
-            pausePanel.SetActive(true);
-            pauseButton.gameObject.SetActive(false);
-            resumeButton.gameObject.SetActive(true);
+            pausePanel.SetActive(true);　　//パネルを出す
+            pauseButton.gameObject.SetActive(false); //ポーズボタンを消す
             commander.SetActive(false);
 
-            if (isSousa)
+            switch (menuNum)//0:無 1:設定 2:操作説明
             {
-                sousaImg.gameObject.SetActive(true);
-                sousamodoru.gameObject.SetActive(true);
-                sousaButton.gameObject.SetActive(false);
+                case 0: //メニュー
+                    menuPanel.SetActive(true);
+                    settingPanel.SetActive(false);
+                    sousaPanel.SetActive(false);
+                    break;
+
+                case 1: //設定
+                    settingPanel.SetActive(true);
+                    menuPanel.SetActive(false);
+                    break;
+
+                case 2: //操作説明
+                    sousaPanel.SetActive(true);
+                    menuPanel.SetActive(false);
+                    break;
             }
-            else if(!isSousa)
-            {
-                sousaImg.gameObject.SetActive(false);
-                sousamodoru.gameObject.SetActive(false);
-                sousaButton.gameObject.SetActive(true);
-            }
+
 
         }
         //ポーズしてないとき
@@ -73,12 +80,9 @@ public class Menu : MonoBehaviour
             Time.timeScale = 1;
             pausePanel.SetActive(false);
             pauseButton.gameObject.SetActive(true);
-            resumeButton.gameObject.SetActive(false);
             commander.SetActive(true);
 
-            sousaImg.gameObject.SetActive(false);
-            sousamodoru.gameObject.SetActive(false);
-            isSousa = false;
+            menuNum = 0;
         }
 
     }
@@ -96,13 +100,19 @@ public class Menu : MonoBehaviour
 
     private void Sousa()
     {
-        isSousa = true;
+        menuNum = 2;
+    }
+    
+    private void Setting()
+    {
+        menuNum = 1;
     }
 
-    private void SousaModoru()
+    public void MenuBack()
     {
-        isSousa= false;
+        menuNum = 0;
     }
+
 
     //private void
 
