@@ -55,8 +55,8 @@ public class CubeMover : MonoBehaviour
                 {
                     Destroy(root.gameObject);
                     root = null;
+                    player.transform.parent = null; 
                     shouldDestroy = false;
-                    player.transform.parent = null;
                 }
             }
             else
@@ -106,7 +106,7 @@ public class CubeMover : MonoBehaviour
         }
     }
 
-    void moveCubes(Vector3 axis, bool is90Degree, bool isAll, int _orientation)
+    void moveCubes(Vector3 axis, bool is90Degree, bool isMid, int _orientation)
     {
         if (isAvailable())
         {
@@ -114,7 +114,7 @@ public class CubeMover : MonoBehaviour
             audioSource.volume = 0.25f;
             audioSource.Play();
 
-            List<Transform> ts = findCubesInFront(axis, is90Degree, isAll);
+            List<Transform> ts = findCubesInFront(axis, is90Degree, isMid);
             GameObject emptyGO = new GameObject();
             root = emptyGO.transform;
             foreach (Transform t in ts)
@@ -122,12 +122,12 @@ public class CubeMover : MonoBehaviour
                 t.SetParent(root);
 
             }
-            if (axis == rootCube.up && is90Degree == false && isAll == false && (_orientation == 1 || _orientation == -1))
+            if (axis == rootCube.up && is90Degree == false && (_orientation == 1 || _orientation == -1))
             {
                 player.SetParent(root);
-                //Debug.Log("こんにちは");
             }
             rotation = axis * _orientation * rotateSpeed;
+           // Debug.Log(rotation);
             isRotate = true;
         }
         else
@@ -145,18 +145,39 @@ public class CubeMover : MonoBehaviour
         }
     }
 
-    List<Transform> findCubesInFront(Vector3 axis, bool is90Degree, bool isAll)
+    List<Transform> findCubesInFront(Vector3 axis, bool is90Degree, bool isMid)
     {
         List<Transform> result = new List<Transform>();
-        if (isAll)
+
+        // 左中右の中間の列
+        Debug.Log(isMid);
+        if (isMid)
         {
+            
             for (int i = 0; i < rootCube.childCount; i++)
             {
                 Transform t = rootCube.GetChild(i);
                 Vector3 v = t.position - centerCube.position;
                 if (v.magnitude > 1e-4)
                 {
-                    result.Add(t);
+
+                    float cosine = Vector3.Dot(v, axis) / (v.magnitude * axis.magnitude);
+                    if (is90Degree) cosine = Mathf.Abs(cosine);
+
+                    // 0.0005 は中段中列のベクトルの値
+                    // 0.5    は外列のベクトルの値の比較の基準値
+                    if ((!is90Degree))
+                    {
+                        Debug.Log("ここまでは通る");
+                        if (cosine < 0.5f && cosine > 0.0005f)
+                            result.Add(t); Debug.Log(cosine);
+                    }
+                    else if (is90Degree)
+                    {
+                        Debug.Log("ここまでは通る");
+                        if (cosine < 0.5f && cosine > 0.0005f)
+                            result.Add(t); Debug.Log(cosine);
+                    }
                 }
             }
         }
@@ -170,16 +191,18 @@ public class CubeMover : MonoBehaviour
                 {
                     float cosine = Vector3.Dot(v, axis) / (v.magnitude * axis.magnitude);
                     if (is90Degree) cosine = Mathf.Abs(cosine);
-                    if ((!is90Degree) && (cosine > 1e-4))
+                    if ((!is90Degree) && (cosine > 0.5))
                     {
-                        result.Add(t);
-                    }
-                    else if (is90Degree && (cosine < 1e-4))
+                        result.Add(t); Debug.Log(cosine);
+                    }                    
+                    else if (is90Degree && (cosine < 0.0005))
                     {
-                        result.Add(t);
+                        result.Add(t); Debug.Log(cosine);
                     }
+                   
+                    
                 }
-            }
+            }          
         }
         return result;
     }
@@ -201,52 +224,62 @@ public class CubeMover : MonoBehaviour
         isLocked = true; //ロック
         switch (code)
         {
-            case "A_FL":
-                moveCubes(rootCube.forward, false, true, 1);
-                break;
-            case "A_FR":
-                moveCubes(rootCube.forward, false, true, -1);
-                break;
-            case "A_RF":
-                moveCubes(rootCube.right, false, true, -1);
-                break;
-            case "A_RB":
-                moveCubes(rootCube.right, false, true, 1);
-                break;
-            case "A_UR":
-                moveCubes(rootCube.up, false, true, -1);
-                break;
-            case "A_UL":
-                moveCubes(rootCube.up, false, true, 1);
-                break;
+            // Fはfront  画面奥に回転
+            // Bはback   画面前に回転
+            // Rはright  右列を回転
+            // Lはleft   左列を回転
+            // Uはup     最上列を回転
+            // Dはdown   最下列を回転
+            // cはcenter 中段中列の回転
+            // mはmid　　2,4の中段列の回転
+            // 
+
+
             case "F_L":
                 moveCubes(-rootCube.forward, false, false, -1);
                 break;
             case "F_R":
                 moveCubes(-rootCube.forward, false, false, 1);
-                break;
-            case "Fm_L":
+                break;       
+            case "Fc_L":
                 moveCubes(-rootCube.forward, true, false, -1);
                 break;
-            case "Fm_R":
+            case "Fc_R":
                 moveCubes(-rootCube.forward, true, false, 1);
                 break;
+
+            case "Fm_R":
+                moveCubes(-rootCube.forward, false, true, 1);
+                break;
+            case "Fm_L":
+                moveCubes(-rootCube.forward, false, true, -1);
+                break;
+
+            case "Bm_R":
+                moveCubes(rootCube.forward, false, true, -1);
+                break;
+            case "Bm_L":
+                moveCubes(rootCube.forward, false, true, 1);
+                break;
+
             case "B_L":
                 moveCubes(rootCube.forward, false, false, 1);
                 break;
             case "B_R":
                 moveCubes(rootCube.forward, false, false, -1);
                 break;
+
+
             case "R_F":
                 moveCubes(rootCube.right, false, false, -1);
                 break;
             case "R_B":
                 moveCubes(rootCube.right, false, false, 1);
                 break;
-            case "Rm_F":
+            case "Rc_F":
                 moveCubes(rootCube.right, true, false, -1);
                 break;
-            case "Rm_B":
+            case "Rc_B":
                 moveCubes(rootCube.right, true, false, 1);
                 break;
             case "L_F":
@@ -255,18 +288,50 @@ public class CubeMover : MonoBehaviour
             case "L_B":
                 moveCubes(-rootCube.right, false, false, -1);
                 break;
+
+            case "Lm_B":
+                moveCubes(-rootCube.right, false, true, -1);
+                break;
+            case "Rm_B":
+                moveCubes(rootCube.right, false, true, 1);
+                break;
+
+            case "Lm_F":
+                moveCubes(rootCube.right, false, true, -1);
+                break;
+            case "Rm_F":
+                moveCubes(-rootCube.right, false, true, 1);
+                break;
+
+            /// 横向き回転
             case "U_R"://
                 moveCubes(rootCube.up, false, false, -1);
                 break;
             case "U_L"://
                 moveCubes(rootCube.up, false, false, 1);
                 break;
-            case "Um_R":
+            
+            case "Uc_R":
                 moveCubes(rootCube.up, true, false, -1);
                 break;
-            case "Um_L":
+            case "Uc_L":
                 moveCubes(rootCube.up, true, false, 1);
                 break;
+
+            case "Um_R":
+                moveCubes(rootCube.up, false, true, -1);
+                break;
+            case "Um_L":
+                moveCubes(rootCube.up, false, true, 1);
+                break;
+
+            case "Dm_R":
+                moveCubes(-rootCube.up, false, true, 1);
+                break;
+            case "Dm_L":
+                moveCubes(-rootCube.up, false, true, -1);
+                break;
+
             case "D_R":
                 moveCubes(-rootCube.up, false, false, 1);
                 break;

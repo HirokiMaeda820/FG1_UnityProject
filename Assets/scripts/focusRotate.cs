@@ -37,7 +37,7 @@ public class focusRotate : MonoBehaviour
 
         if (!sideCameraReset)
         {
-            transform.position = new Vector3(0, 0, -60.0f);
+            transform.position = new Vector3(0, 0, -100.0f);
             transform.rotation = new Quaternion(0, 0, 0, 0);
             sideCameraReset = true;
         }

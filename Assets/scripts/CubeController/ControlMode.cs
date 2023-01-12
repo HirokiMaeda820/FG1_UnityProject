@@ -38,15 +38,17 @@ public class ControlMode : MonoBehaviour
         }
         else if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.SELECT)
         {
-            ////回転可能、ロック解除、回せる残りが回数が1以上
-            //if (cubemover.isAvailable() && !cubemover.IsLocked() && (gameManager.RotateCount() >= 1))
-            //{
-            //    rubiksArrows.gameObject.SetActive(true);
-            //}
-            //else
-            //{
-            //    rubiksArrows.gameObject.SetActive(false);
-            //}
+            //仮
+
+            //回転可能、ロック解除、回せる残りが回数が1以上
+            if (cubemover.isAvailable() && !cubemover.IsLocked() && (gameManager.RotateCount() >= 1))
+            {
+                rubiksArrows.gameObject.SetActive(true);
+            }
+            else
+            {
+                rubiksArrows.gameObject.SetActive(false);
+            }
         }
 
     }
