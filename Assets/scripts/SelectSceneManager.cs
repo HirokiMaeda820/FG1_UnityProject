@@ -14,6 +14,8 @@ public class SelectSceneManager : MonoBehaviour
 
     public GameManager gameManager;
 
+    public Menu menu;
+
     public GameObject rightArrow;
     public GameObject leftArrow;
 
@@ -22,7 +24,7 @@ public class SelectSceneManager : MonoBehaviour
     [SerializeField] CinemachineVirtualCameraBase camera2;
     [SerializeField] CinemachineVirtualCameraBase camera3;
     [SerializeField] CinemachineVirtualCameraBase camera4;
-    // [SerializeField] CinemachineVirtualCameraBase camera5;
+    [SerializeField] CinemachineVirtualCameraBase camera5;
 
     AudioSource audioSource;
     public AudioClip ketteiAudio;
@@ -33,8 +35,8 @@ public class SelectSceneManager : MonoBehaviour
     void Start()
     {
         isStart = false;
-        selectCount = 5;
-        startTimer = 100;
+        selectCount = 6;
+        startTimer = 120;
         arrowTimer = 0;
         camera4.MoveToTopOfPrioritySubqueue();
 
@@ -47,6 +49,8 @@ public class SelectSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (menu.GetIsPause()) return;
+
         SelectCountUpdate();
 
         ClickSelect();
@@ -91,23 +95,25 @@ public class SelectSceneManager : MonoBehaviour
             }
         }
 
-        if (selectCount < 0) selectCount = 4;
-        if (selectCount > 4) selectCount = 0;
+        if (selectCount < 0) selectCount = 5;
+        if (selectCount > 5) selectCount = 0;
 
         if (selectCount == 0) camera0.MoveToTopOfPrioritySubqueue();
         if (selectCount == 1) camera1.MoveToTopOfPrioritySubqueue();
         if (selectCount == 2) camera2.MoveToTopOfPrioritySubqueue();
         if (selectCount == 3) camera3.MoveToTopOfPrioritySubqueue();
         if (selectCount == 4) camera4.MoveToTopOfPrioritySubqueue();
-        //if (selectCount == 5) camera5.MoveToTopOfPrioritySubqueue();
+        if (selectCount == 5) camera5.MoveToTopOfPrioritySubqueue();
 
         //‘I‘ð
-        if (Input.GetKeyDown(KeyCode.Space)){
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             if (selectCount == 0) { gameManager.ChangeScene("tutorialScene"); audioSource.PlayOneShot(ketteiAudio); }
             else if (selectCount == 1) { gameManager.ChangeScene("stage1"); audioSource.PlayOneShot(ketteiAudio); }
             else if (selectCount == 2) { gameManager.ChangeScene("stage2"); audioSource.PlayOneShot(ketteiAudio); }
             else if (selectCount == 3) { gameManager.ChangeScene("stage3"); audioSource.PlayOneShot(ketteiAudio); }
             else if (selectCount == 4) { gameManager.ChangeScene("stage4"); audioSource.PlayOneShot(ketteiAudio); }
+            else if (selectCount == 5) { gameManager.ChangeScene("stage5"); audioSource.PlayOneShot(ketteiAudio); }
         }
     }
 
@@ -129,7 +135,7 @@ public class SelectSceneManager : MonoBehaviour
                 else if (hit.collider.gameObject.CompareTag("select2")) { gameManager.ChangeScene("stage2"); audioSource.PlayOneShot(ketteiAudio); }
                 else if (hit.collider.gameObject.CompareTag("select3")) { gameManager.ChangeScene("stage3"); audioSource.PlayOneShot(ketteiAudio); }
                 else if (hit.collider.gameObject.CompareTag("select4")) { gameManager.ChangeScene("stage4"); audioSource.PlayOneShot(ketteiAudio); }
-                //else if (hit.collider.gameObject.CompareTag("select5")) { gameManager.ChangeScene("masterMiyata"); audioSource.PlayOneShot(ketteiAudio); }
+                else if (hit.collider.gameObject.CompareTag("select5")) { gameManager.ChangeScene("stage5"); audioSource.PlayOneShot(ketteiAudio); }
 
             }
         }

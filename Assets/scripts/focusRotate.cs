@@ -12,8 +12,12 @@ public class focusRotate : MonoBehaviour
     public CameraSwitcher cameraSwitcher;
     private Vector2 lastMousePosition;
 
+    public GameObject menu;
+
     bool sideCameraReset;
     private Slider slider;
+
+    public bool fiveRow = false;//false:3列 true:5列
 
     void Start()
     {
@@ -26,7 +30,7 @@ public class focusRotate : MonoBehaviour
 
     void Update()
     {
-        // if (!Input.GetKey(KeyCode.Tab)) return;
+
 
         //アクティブじゃないときはreturn
         if (!(cameraSwitcher.CameraSwitch() == 1))
@@ -35,9 +39,12 @@ public class focusRotate : MonoBehaviour
             return;
         }
 
+        if (menu.GetComponent<Menu>().GetIsPause()) return;
+
         if (!sideCameraReset)
         {
-            transform.position = new Vector3(0, 0, -100.0f);
+            if (!fiveRow) transform.position = new Vector3(0, 0, -60.0f);
+            if (fiveRow) transform.position = new Vector3(0, 0, -100.0f);
             transform.rotation = new Quaternion(0, 0, 0, 0);
             sideCameraReset = true;
         }

@@ -39,7 +39,11 @@ public class CameraSwitcher : MonoBehaviour
     public RectTransform menuBotton;
     public RectTransform resetBotton;
 
+    public GameObject menu;
+
     static private bool playerMode = false;//false:FreeLook trur:Follow
+
+    public bool selectScene = false;
 
     public enum SwitchName
     {
@@ -51,8 +55,13 @@ public class CameraSwitcher : MonoBehaviour
 
     private void Start()
     {
+
+
         cameraSwitch = (int)SwitchName.UP;
         oldCamera = (int)SwitchName.UP;
+
+
+        if (selectScene) return;
 
         _mainCamera.SetActive(true);
         _goalCamera.SetActive(false);
@@ -72,6 +81,9 @@ public class CameraSwitcher : MonoBehaviour
 
     private void Update()
     {
+        if (selectScene) return;
+        if (menu.GetComponent<Menu>().GetIsPause()) return;
+
         //スペース押したら選択モード
         if (Input.GetKeyDown(KeyCode.Space) && cameraSwitch != (int)SwitchName.SELECT)
         {
@@ -199,6 +211,7 @@ public class CameraSwitcher : MonoBehaviour
     public void SetCameraSwitch(int switchNum)
     {
         cameraSwitch = switchNum;
+        Debug.Log("こんにちは");
     }
 
     public void SetOldCamera(int oldNum)

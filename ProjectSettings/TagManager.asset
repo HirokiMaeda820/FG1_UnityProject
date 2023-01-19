@@ -11,6 +11,42 @@ TagManager:
   - select3
   - select4
   - select5
+  - CenterCube
+  - Face3
+  - Face5
+  - Face9
+  - Face7
+  - Face4
+  - Face6
+  - Face8
+  - Face1
+  - MainCanvas
+  - Face2
+  - 5Face1
+  - 5Face2
+  - 5Face3
+  - 5Face4
+  - 5Face5
+  - 5Face6
+  - 5Face7
+  - 5Face8
+  - 5Face9
+  - 5Face10
+  - 5Face11
+  - 5Face12
+  - 5Face13
+  - 5Face14
+  - 5Face15
+  - 5Face16
+  - 5Face17
+  - 5Face18
+  - 5Face19
+  - 5Face20
+  - 5Face21
+  - 5Face22
+  - 5Face23
+  - 5Face24
+  - 5Face25
   layers:
   - Default
   - TransparentFX

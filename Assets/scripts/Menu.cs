@@ -25,15 +25,18 @@ public class Menu : MonoBehaviour
         resumeButton.onClick.AddListener(Resume);
 
         pauseButton.gameObject.SetActive(true);
-        
+
         sousaButton.onClick.AddListener(Sousa);
         settingButton.onClick.AddListener(Setting);
         //メニューに戻る系はinspectorから
 
         sousaButton.gameObject.SetActive(true);
-       
 
-        commander.SetActive(true);
+
+        if (commander != null)
+        {
+            commander.GetComponent<CtrlKeyMouse>().enabled = true;
+        }
         isPause = false;
     }
 
@@ -51,8 +54,10 @@ public class Menu : MonoBehaviour
             Time.timeScale = 0;  // 時間停止
             pausePanel.SetActive(true);　　//パネルを出す
             pauseButton.gameObject.SetActive(false); //ポーズボタンを消す
-            commander.SetActive(false);
-
+            if (commander != null)
+            {
+                commander.GetComponent<CtrlKeyMouse>().enabled = false;
+            }
             switch (menuNum)//0:無 1:設定 2:操作説明
             {
                 case 0: //メニュー
@@ -80,8 +85,10 @@ public class Menu : MonoBehaviour
             Time.timeScale = 1;
             pausePanel.SetActive(false);
             pauseButton.gameObject.SetActive(true);
-            commander.SetActive(true);
-
+            if (commander != null)
+            {
+                commander.GetComponent<CtrlKeyMouse>().enabled = true;
+            }
             menuNum = 0;
         }
 
@@ -102,7 +109,7 @@ public class Menu : MonoBehaviour
     {
         menuNum = 2;
     }
-    
+
     private void Setting()
     {
         menuNum = 1;

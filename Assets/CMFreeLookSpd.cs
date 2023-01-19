@@ -9,7 +9,7 @@ public class CMFreeLookSpd : MonoBehaviour
     CinemachineFreeLook _camera;
     Slider _slider;
 
-    static private float spd;
+    static private float spd = 300;
 
     // Start is called before the first frame update
 
@@ -22,12 +22,16 @@ public class CMFreeLookSpd : MonoBehaviour
     {
         _camera = GetComponent<CinemachineFreeLook>();
         //_slider = GameObject.Find("pSlider").GetComponent<Slider>();
+
+        _slider.value = spd;
     }
 
     // Update is called once per frame
     void Update()
     {
-        _camera.m_XAxis.m_MaxSpeed = _slider.value;
+        spd = _slider.value;
+
+        _camera.m_XAxis.m_MaxSpeed = spd;
 
     }
 }
