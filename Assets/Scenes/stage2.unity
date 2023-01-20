@@ -23112,7 +23112,7 @@ MonoBehaviour:
   countText: {fileID: 1131676597}
   menuBotton: {fileID: 1722454212}
   resetBotton: {fileID: 1866409845}
-  menu: {fileID: 0}
+  menu: {fileID: 1437955686}
   selectScene: 0
 --- !u!1 &1919436010
 GameObject:
@@ -24512,7 +24512,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995251509}
-  m_LocalRotation: {x: -0.2074984, y: 0.049305435, z: -0.0060923267, w: 0.97697306}
+  m_LocalRotation: {x: -0.2074984, y: 0.04930547, z: -0.0060923304, w: 0.97697306}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
