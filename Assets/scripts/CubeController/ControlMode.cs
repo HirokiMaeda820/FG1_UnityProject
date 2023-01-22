@@ -10,8 +10,7 @@ public class ControlMode : MonoBehaviour
     public CameraSwitcher cameraSwitcher;
     public GameManager gameManager;
 
-    public GameObject menu;
-
+    public debugManager debugManager;
     public void Start()
     {
 
@@ -29,8 +28,16 @@ public class ControlMode : MonoBehaviour
     void Update()
     {
 
+        if (debugManager != null)
+        {
+            if (!debugManager.GetIsDebug())
+                cameraSwitcher.CameraSetting();
+        }
+        else
+        {
+            cameraSwitcher.CameraSetting();
+        }
 
-        cameraSwitcher.CameraSetting();
 
         if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.UP)
         {

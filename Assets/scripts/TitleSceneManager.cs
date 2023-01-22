@@ -17,6 +17,11 @@ public class TitleSceneManager : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
+            //gameManager.ChangeScene(nextScene);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             gameManager.ChangeScene(nextScene);
         }
     }
