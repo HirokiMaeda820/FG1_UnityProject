@@ -22118,6 +22118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Object: {fileID: 919132148456512138}
   cameraSwitcher: {fileID: 1918664315}
+  menu: {fileID: 0}
+  fiveRow: 0
 --- !u!1 &835367365
 GameObject:
   m_ObjectHideFlags: 0
@@ -50247,6 +50249,7 @@ MonoBehaviour:
   cubemover: {fileID: 1918664304}
   cameraSwitcher: {fileID: 1918664315}
   gameManager: {fileID: 1159765274}
+  debugManager: {fileID: 0}
 --- !u!114 &1918664315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50278,6 +50281,8 @@ MonoBehaviour:
   countText: {fileID: 1131676597}
   menuBotton: {fileID: 1498182195}
   resetBotton: {fileID: 755748202}
+  menu: {fileID: 0}
+  selectScene: 0
 --- !u!1 &1918777385
 GameObject:
   m_ObjectHideFlags: 0
