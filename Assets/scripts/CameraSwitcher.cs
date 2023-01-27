@@ -230,5 +230,9 @@ public class CameraSwitcher : MonoBehaviour
         playerMode = true;
     }
 
+    public bool GetPlayerMode()
+    {
+        return playerMode;
+    }
 
 }

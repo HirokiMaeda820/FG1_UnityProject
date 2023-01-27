@@ -19079,6 +19079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 2103822548}
   nextScene: SelectScene
+  audioClip: {fileID: 8300000, guid: f8db680ad4f9aca44ba881cd93c0842f, type: 3}
 --- !u!82 &2103822551
 AudioSource:
   m_ObjectHideFlags: 0

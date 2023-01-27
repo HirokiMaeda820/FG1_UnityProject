@@ -19,7 +19,7 @@ public class RenerrbSwitch : MonoBehaviour
 
         if (this.transform.tag == "CenterCube")
         {
-            this.gameObject.SetActive(true);
+            this.gameObject.SetActive(true);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
         }
     }
 

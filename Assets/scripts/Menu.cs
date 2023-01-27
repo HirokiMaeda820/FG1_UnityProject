@@ -18,6 +18,12 @@ public class Menu : MonoBehaviour
     private int menuNum = 0;//0:ñ≥ 1:ê›íË 2:ëÄçÏê‡ñæ
     private bool isPause = false;
 
+    private AudioSource audioSource;
+
+    [SerializeField] private AudioClip pauseSound;
+    [SerializeField] private AudioClip backSound;
+    [SerializeField] private AudioClip erabuSound;
+
     void Start()
     {
         pausePanel.SetActive(false);
@@ -32,6 +38,7 @@ public class Menu : MonoBehaviour
 
         sousaButton.gameObject.SetActive(true);
 
+        audioSource = GetComponent<AudioSource>();
 
         if (commander != null)
         {
@@ -45,6 +52,9 @@ public class Menu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (!isPause) audioSource.PlayOneShot(pauseSound);
+            else if(isPause) audioSource.PlayOneShot(backSound);
+
             isPause = !isPause;
         }
 
@@ -98,26 +108,31 @@ public class Menu : MonoBehaviour
     private void Pause()
     {
         isPause = true;
+        audioSource.PlayOneShot(pauseSound);
     }
 
     private void Resume()
     {
         isPause = false;
+        audioSource.PlayOneShot(backSound);
     }
 
     private void Sousa()
     {
         menuNum = 2;
+        audioSource.PlayOneShot(erabuSound);
     }
 
     private void Setting()
     {
         menuNum = 1;
+        audioSource.PlayOneShot(erabuSound);
     }
 
     public void MenuBack()
     {
         menuNum = 0;
+        audioSource.PlayOneShot(backSound);
     }
 
 
