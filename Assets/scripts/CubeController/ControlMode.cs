@@ -380,12 +380,12 @@ public class ControlMode : MonoBehaviour
 
                         break;
                     case "5Face24":
-                        rubiksArrows.transform.Find("Arrow_U9").gameObject.SetActive(false);
+                        rubiksArrows.transform.Find("Arrow_R1-4").gameObject.SetActive(false);
+                        rubiksArrows.transform.Find("Arrow_U3-6").gameObject.SetActive(false);
                         rubiksArrows.transform.Find("Arrow_U3").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_U4").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_U6").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F2").gameObject.SetActive(false);
-                        rubiksArrows.transform.Find("Arrow_F8").gameObject.SetActive(false);
+                        rubiksArrows.transform.Find("Arrow_U9").gameObject.SetActive(false);
+                        rubiksArrows.transform.Find("Arrow_F2-3").gameObject.SetActive(false);
+                        rubiksArrows.transform.Find("Arrow_F8-9").gameObject.SetActive(false);
 
                         break;
                     case "5Face25":
