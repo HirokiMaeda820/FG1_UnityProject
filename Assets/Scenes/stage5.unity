@@ -286,6 +286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &21795589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,6 +1512,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &92007076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,6 +1833,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &125388095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,6 +2621,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
+      propertyPath: key
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: cameraSwitcher
       value: 
       objectReference: {fileID: 1918664315}
@@ -2824,6 +2834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &176916189
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,7 +3726,7 @@ PrefabInstance:
     - target: {fileID: 4723973070475817018, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a5dc5e55571c0f34ab5fa76c56f8760e, type: 2}
+      objectReference: {fileID: 2100000, guid: b3720e211425e2944b21d9e08b189865, type: 2}
     - target: {fileID: 6376104247040798180, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3770,6 +3782,10 @@ PrefabInstance:
     - target: {fileID: 6376104247040798180, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
+      propertyPath: key
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: cameraSwitcher
@@ -3981,6 +3997,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &267030483
 GameObject:
   m_ObjectHideFlags: 0
@@ -5021,6 +5039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &315568137
 GameObject:
   m_ObjectHideFlags: 0
@@ -5846,6 +5866,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!114 &387487589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7460,6 +7482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!114 &516425992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7572,6 +7596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &528591504
 GameObject:
   m_ObjectHideFlags: 0
@@ -8173,6 +8199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &571215409
 GameObject:
   m_ObjectHideFlags: 0
@@ -8354,6 +8382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &579553975
 GameObject:
   m_ObjectHideFlags: 0
@@ -8707,6 +8737,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
+      propertyPath: key
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: cameraSwitcher
       value: 
       objectReference: {fileID: 1918664315}
@@ -8865,6 +8899,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &639219895
 GameObject:
   m_ObjectHideFlags: 0
@@ -9187,7 +9223,7 @@ PrefabInstance:
     - target: {fileID: 4723973070475817018, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 40727c07f43a661499e45b6dd12875ae, type: 2}
+      objectReference: {fileID: 2100000, guid: bd6e38fa51e6a0a41b080782fef60391, type: 2}
     - target: {fileID: 6376104247040798180, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9243,6 +9279,10 @@ PrefabInstance:
     - target: {fileID: 6376104247040798180, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
+      propertyPath: key
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: cameraSwitcher
@@ -9344,7 +9384,7 @@ PrefabInstance:
     - target: {fileID: 8732023849361901699, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5deb7d831f873634d9d700f670efa90c, type: 2}
+      objectReference: {fileID: 2100000, guid: 2547183cd496b5e428485fff2f2114ce, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
@@ -9385,6 +9425,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &680927463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4405877948844470772, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
@@ -9403,6 +9445,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &702071954
 GameObject:
   m_ObjectHideFlags: 0
@@ -10076,7 +10120,7 @@ PrefabInstance:
     - target: {fileID: 8732023849361901699, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a5dc5e55571c0f34ab5fa76c56f8760e, type: 2}
+      objectReference: {fileID: 2100000, guid: b3720e211425e2944b21d9e08b189865, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
@@ -10117,6 +10161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &771747722
 GameObject:
   m_ObjectHideFlags: 0
@@ -10356,7 +10402,7 @@ PrefabInstance:
     - target: {fileID: 4723973070475817018, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: afdeecb33bb600747afb2d4824dd98bb, type: 2}
+      objectReference: {fileID: 2100000, guid: ab27d69d718e9c045bb94f192a65cde2, type: 2}
     - target: {fileID: 6376104247040798180, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10412,6 +10458,10 @@ PrefabInstance:
     - target: {fileID: 6376104247040798180, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
+      propertyPath: key
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: cameraSwitcher
@@ -10782,6 +10832,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1001 &825063677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10857,6 +10909,10 @@ PrefabInstance:
     - target: {fileID: 6376104247040798180, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
+      propertyPath: key
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: cameraSwitcher
@@ -11191,6 +11247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &868005586
 GameObject:
   m_ObjectHideFlags: 0
@@ -12362,6 +12420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &942426672
 GameObject:
   m_ObjectHideFlags: 0
@@ -13802,6 +13862,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1018487209
 GameObject:
   m_ObjectHideFlags: 0
@@ -13975,6 +14037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1023385168
 GameObject:
   m_ObjectHideFlags: 0
@@ -14792,6 +14856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1088443510
 GameObject:
   m_ObjectHideFlags: 0
@@ -15051,6 +15117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1091353583
 GameObject:
   m_ObjectHideFlags: 0
@@ -15203,6 +15271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1106757916
 GameObject:
   m_ObjectHideFlags: 0
@@ -15916,6 +15986,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1001 &1152435926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16281,6 +16353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1158020633
 GameObject:
   m_ObjectHideFlags: 0
@@ -16666,7 +16740,7 @@ PrefabInstance:
     - target: {fileID: 8732023849361901699, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: afdeecb33bb600747afb2d4824dd98bb, type: 2}
+      objectReference: {fileID: 2100000, guid: ab27d69d718e9c045bb94f192a65cde2, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
@@ -16707,6 +16781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1175054246
 GameObject:
   m_ObjectHideFlags: 0
@@ -18231,7 +18307,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1355480687}
   - {fileID: 1297485981}
   - {fileID: 557331831}
   - {fileID: 1624735339}
@@ -19196,6 +19271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1328533433
 GameObject:
   m_ObjectHideFlags: 0
@@ -19409,6 +19486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1339209701
 GameObject:
   m_ObjectHideFlags: 0
@@ -19697,7 +19776,7 @@ PrefabInstance:
     - target: {fileID: 8732023849361901699, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a5dc5e55571c0f34ab5fa76c56f8760e, type: 2}
+      objectReference: {fileID: 2100000, guid: b3720e211425e2944b21d9e08b189865, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
@@ -19738,6 +19817,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1347350831
 GameObject:
   m_ObjectHideFlags: 0
@@ -19892,7 +19973,7 @@ PrefabInstance:
     - target: {fileID: 8732023849361901699, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: afdeecb33bb600747afb2d4824dd98bb, type: 2}
+      objectReference: {fileID: 2100000, guid: ab27d69d718e9c045bb94f192a65cde2, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
@@ -19919,6 +20000,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!114 &1352781239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19933,82 +20016,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: {fileID: 785883276}
   isFadeOut: 0
---- !u!1 &1355480686
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1355480687}
-  - component: {fileID: 1355480689}
-  - component: {fileID: 1355480688}
-  m_Layer: 5
-  m_Name: stage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1355480687
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355480686}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1258388977}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -724, y: 382}
-  m_SizeDelta: {x: 300, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1355480688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355480686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2742a52bb2c10bb408a9bc97e3351074, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1355480689
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355480686}
-  m_CullTransparentMesh: 1
 --- !u!1 &1360497133
 GameObject:
   m_ObjectHideFlags: 0
@@ -20525,7 +20532,7 @@ PrefabInstance:
     - target: {fileID: 2547976940101571913, guid: 27aa70bbd85cb4440873b3e0131b03e6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a5dc5e55571c0f34ab5fa76c56f8760e, type: 2}
+      objectReference: {fileID: 2100000, guid: 659daaccf9dc7354c8226adefa6956d7, type: 2}
     - target: {fileID: 2547976940101571914, guid: 27aa70bbd85cb4440873b3e0131b03e6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -20914,6 +20921,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!114 &1414985067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21029,6 +21038,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1437955686
 GameObject:
   m_ObjectHideFlags: 0
@@ -21543,6 +21554,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1459588718
 GameObject:
   m_ObjectHideFlags: 3
@@ -21992,7 +22005,7 @@ PrefabInstance:
     - target: {fileID: 8732023849361901699, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5deb7d831f873634d9d700f670efa90c, type: 2}
+      objectReference: {fileID: 2100000, guid: 2547183cd496b5e428485fff2f2114ce, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
@@ -22019,6 +22032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!114 &1468741000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22427,6 +22442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1498883878
 GameObject:
   m_ObjectHideFlags: 0
@@ -22743,6 +22760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1504321312
 GameObject:
   m_ObjectHideFlags: 0
@@ -22920,6 +22939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1519036381
 GameObject:
   m_ObjectHideFlags: 0
@@ -23238,6 +23259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1001 &1547455570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23249,7 +23272,7 @@ PrefabInstance:
     - target: {fileID: 4405877948844470774, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6cf1ef82e2250594f98f0dd82bba3110, type: 2}
+      objectReference: {fileID: 2100000, guid: 282b6a2565e051d468e38827a8e885e4, type: 2}
     - target: {fileID: 4405877949341703250, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Name
       value: DoorAxis
@@ -23305,7 +23328,7 @@ PrefabInstance:
     - target: {fileID: 8332006768918945709, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6cf1ef82e2250594f98f0dd82bba3110, type: 2}
+      objectReference: {fileID: 2100000, guid: 282b6a2565e051d468e38827a8e885e4, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
@@ -23474,7 +23497,7 @@ PrefabInstance:
     - target: {fileID: 8732023849361901699, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 40727c07f43a661499e45b6dd12875ae, type: 2}
+      objectReference: {fileID: 2100000, guid: bd6e38fa51e6a0a41b080782fef60391, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
@@ -23515,6 +23538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1560581475
 GameObject:
   m_ObjectHideFlags: 0
@@ -23787,6 +23812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1577426733
 GameObject:
   m_ObjectHideFlags: 3
@@ -23908,7 +23935,7 @@ PrefabInstance:
     - target: {fileID: 4405877948844470774, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 47003b60ec905bd458548406a24b5828, type: 2}
+      objectReference: {fileID: 2100000, guid: dbf856ecd4708624a953450096d46343, type: 2}
     - target: {fileID: 4405877949341703250, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Name
       value: DoorAxis
@@ -23964,7 +23991,7 @@ PrefabInstance:
     - target: {fileID: 8332006768918945709, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 47003b60ec905bd458548406a24b5828, type: 2}
+      objectReference: {fileID: 2100000, guid: dbf856ecd4708624a953450096d46343, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
@@ -24515,6 +24542,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1627162852
 GameObject:
   m_ObjectHideFlags: 3
@@ -25555,6 +25584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1001 &1660255141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25653,6 +25684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1662730459
 GameObject:
   m_ObjectHideFlags: 0
@@ -26036,7 +26069,7 @@ PrefabInstance:
     - target: {fileID: 4405877948844470774, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c6e4e1b3e5f07784bbb3fff697bcd695, type: 2}
+      objectReference: {fileID: 2100000, guid: 76385e8ec3e017744972efee4e992502, type: 2}
     - target: {fileID: 4405877949341703250, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Name
       value: DoorAxis
@@ -26092,7 +26125,7 @@ PrefabInstance:
     - target: {fileID: 8332006768918945709, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c6e4e1b3e5f07784bbb3fff697bcd695, type: 2}
+      objectReference: {fileID: 2100000, guid: 76385e8ec3e017744972efee4e992502, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
@@ -26646,6 +26679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1716597451
 GameObject:
   m_ObjectHideFlags: 0
@@ -26845,6 +26880,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1729581841
 GameObject:
   m_ObjectHideFlags: 0
@@ -27050,7 +27087,7 @@ PrefabInstance:
     - target: {fileID: 4405877948844470774, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a5dc5e55571c0f34ab5fa76c56f8760e, type: 2}
+      objectReference: {fileID: 2100000, guid: 659daaccf9dc7354c8226adefa6956d7, type: 2}
     - target: {fileID: 4405877949341703250, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Name
       value: DoorAxis
@@ -27106,7 +27143,7 @@ PrefabInstance:
     - target: {fileID: 8332006768918945709, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a5dc5e55571c0f34ab5fa76c56f8760e, type: 2}
+      objectReference: {fileID: 2100000, guid: 659daaccf9dc7354c8226adefa6956d7, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b2d3ee5b7d0be7d41af4b38ae99a2b56, type: 3}
@@ -27224,6 +27261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1753285214
 GameObject:
   m_ObjectHideFlags: 0
@@ -27625,6 +27664,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1001 &1774497787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27723,6 +27764,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1774855782
 GameObject:
   m_ObjectHideFlags: 0
@@ -28606,6 +28649,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1471443561405507948, guid: 999d4b958ff6b8848b00bdba1a1e8918, type: 3}
   m_PrefabInstance: {fileID: 1830407421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1830407425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830407423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c2d1971ac8d26498c4f0973ce9686e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSwitcher: {fileID: 1918664315}
+  goal: 1
+  key: 0
 --- !u!1 &1845902874
 GameObject:
   m_ObjectHideFlags: 0
@@ -30846,7 +30904,7 @@ PrefabInstance:
     - target: {fileID: 8732023849361901699, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: afdeecb33bb600747afb2d4824dd98bb, type: 2}
+      objectReference: {fileID: 2100000, guid: ab27d69d718e9c045bb94f192a65cde2, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
@@ -30873,6 +30931,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!114 &1946593615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31258,7 +31318,7 @@ PrefabInstance:
     - target: {fileID: 8732023849361901699, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 439d2b248ae6e434088c83d2615025c5, type: 2}
+      objectReference: {fileID: 2100000, guid: a66e97196eae0bb4d8e7d6fae034be42, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f1ab66a18adf2408eea4d42cf26c5b, type: 3}
@@ -31299,6 +31359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1964568401
 GameObject:
   m_ObjectHideFlags: 3
@@ -32318,7 +32380,7 @@ PrefabInstance:
     - target: {fileID: 4723973070475817018, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 439d2b248ae6e434088c83d2615025c5, type: 2}
+      objectReference: {fileID: 2100000, guid: a66e97196eae0bb4d8e7d6fae034be42, type: 2}
     - target: {fileID: 6376104247040798180, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -32374,6 +32436,10 @@ PrefabInstance:
     - target: {fileID: 6376104247040798180, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
+      propertyPath: key
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: cameraSwitcher
@@ -32760,6 +32826,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &2058831866
 GameObject:
   m_ObjectHideFlags: 0

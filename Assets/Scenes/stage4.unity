@@ -2934,7 +2934,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 264346832}
   - {fileID: 280507910}
   - {fileID: 1577151304}
   - {fileID: 1807927057}
@@ -3331,6 +3330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3754,82 +3757,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261947703}
   m_Mesh: {fileID: -2432090755550338912, guid: aafbb1d58e690bf428150d62b45d4c97, type: 3}
---- !u!1 &264346831
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 264346832}
-  - component: {fileID: 264346834}
-  - component: {fileID: 264346833}
-  m_Layer: 5
-  m_Name: stage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &264346832
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264346831}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 198819868}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -724, y: 382}
-  m_SizeDelta: {x: 300, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &264346833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264346831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 43e234174e244dd4693058d4f99d36f6, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &264346834
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264346831}
-  m_CullTransparentMesh: 1
 --- !u!1 &267030483
 GameObject:
   m_ObjectHideFlags: 0
@@ -4132,6 +4059,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &272522534
 GameObject:
   m_ObjectHideFlags: 0
@@ -5470,6 +5399,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &355591436
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,6 +5617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &362498684
 GameObject:
   m_ObjectHideFlags: 0
@@ -6895,6 +6828,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &422052071
 GameObject:
   m_ObjectHideFlags: 0
@@ -6972,6 +6907,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &439766405
 GameObject:
   m_ObjectHideFlags: 0
@@ -8574,6 +8511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &556142894
 GameObject:
   m_ObjectHideFlags: 0
@@ -8677,6 +8616,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9190,6 +9133,10 @@ PrefabInstance:
     - target: {fileID: 6376104247040798180, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
+      propertyPath: key
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8962377281873146364, guid: 24627583f311c7847851a9d5e7582e0b, type: 3}
       propertyPath: cameraSwitcher
@@ -9875,6 +9822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &646162809
 GameObject:
   m_ObjectHideFlags: 0
@@ -10300,6 +10249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10382,6 +10335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &682134528
 GameObject:
   m_ObjectHideFlags: 0
@@ -11143,6 +11098,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &723268996
 GameObject:
   m_ObjectHideFlags: 0
@@ -11651,6 +11608,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &781275204
 GameObject:
   m_ObjectHideFlags: 0
@@ -12395,6 +12354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -13568,7 +13531,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926272673}
-  m_LocalRotation: {x: -0.001223547, y: -0.992435, z: 0.12263035, w: 0.005760817}
+  m_LocalRotation: {x: -0.0012235398, y: -0.992435, z: 0.12263035, w: 0.005760783}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13600,6 +13563,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &938653886
 GameObject:
   m_ObjectHideFlags: 0
@@ -13733,6 +13698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &961629033 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1079814868515594842, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
@@ -13756,6 +13723,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &970439037
 GameObject:
   m_ObjectHideFlags: 0
@@ -13977,6 +13946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14855,6 +14828,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1471443561405507948, guid: 999d4b958ff6b8848b00bdba1a1e8918, type: 3}
   m_PrefabInstance: {fileID: 2052699530}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1052716475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052716474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c2d1971ac8d26498c4f0973ce9686e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSwitcher: {fileID: 1918664315}
+  goal: 1
+  key: 0
 --- !u!1 &1055223364
 GameObject:
   m_ObjectHideFlags: 0
@@ -15360,6 +15348,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1091353583
 GameObject:
   m_ObjectHideFlags: 0
@@ -15432,6 +15422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1110332927
 GameObject:
   m_ObjectHideFlags: 0
@@ -15951,6 +15943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -16670,6 +16666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -16997,6 +16997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -17074,6 +17078,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1189582785
 GameObject:
   m_ObjectHideFlags: 0
@@ -18126,6 +18132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -18374,6 +18384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1303547344
 GameObject:
   m_ObjectHideFlags: 0
@@ -19822,6 +19834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -20841,6 +20857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -21220,6 +21240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1519036381
 GameObject:
   m_ObjectHideFlags: 0
@@ -22298,6 +22320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -22539,6 +22565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1614726429
 GameObject:
   m_ObjectHideFlags: 0
@@ -22962,6 +22990,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1629866958
 GameObject:
   m_ObjectHideFlags: 0
@@ -23318,6 +23348,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1001 &1656478403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23330,6 +23362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -24243,6 +24279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1743920176
 GameObject:
   m_ObjectHideFlags: 0
@@ -25159,6 +25197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -25319,6 +25361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1881259097
 GameObject:
   m_ObjectHideFlags: 0
@@ -25425,6 +25469,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1889576344
 GameObject:
   m_ObjectHideFlags: 0
@@ -26043,6 +26089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -27119,6 +27169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1 &1964090125
 GameObject:
   m_ObjectHideFlags: 0
@@ -28603,6 +28655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -28731,7 +28787,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063958179}
-  m_LocalRotation: {x: -0.000943354, y: -0.9853385, z: 0.17050909, w: 0.0058132573}
+  m_LocalRotation: {x: -0.00094335346, y: -0.9853385, z: 0.17050909, w: 0.005813254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -29165,6 +29221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitcher: {fileID: 1918664315}
+  goal: 0
+  key: 0
 --- !u!1001 &2109313105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29268,6 +29326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -29505,6 +29567,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence(Default)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618120132825558207, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f91901060b7cbc41bdbd98244e55a75, type: 2}
     - target: {fileID: 8091396884692775265, guid: 1c74e508c9be9f54881cc38fb9c95438, type: 3}
       propertyPath: m_RootOrder
       value: 1
