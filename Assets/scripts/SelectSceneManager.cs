@@ -112,20 +112,24 @@ public class SelectSceneManager : MonoBehaviour
         if (selectCount == 8) camera8.MoveToTopOfPrioritySubqueue();
 
         //‘I‘ð
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isStart)
         {
-            audioSource.PlayOneShot(ketteiAudio);
 
-            if (selectCount == 0) gameManager.ChangeScene("tutorialScene");
-            else if (selectCount == 1) gameManager.ChangeScene("stage1");
-            else if (selectCount == 2) gameManager.ChangeScene("stage2");
-            else if (selectCount == 3) gameManager.ChangeScene("stage3");
-            else if (selectCount == 4) gameManager.ChangeScene("stage4");
-            else if (selectCount == 5) gameManager.ChangeScene("stage5");
-            else if (selectCount == 6) gameManager.ChangeScene("stage6");
-            else if (selectCount == 7) gameManager.ChangeScene("stage7");
-            else if (selectCount == 8) gameManager.ChangeScene("stage8");
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                audioSource.PlayOneShot(ketteiAudio);
 
+                if (selectCount == 0) gameManager.ChangeScene("tutorialScene");
+                else if (selectCount == 1) gameManager.ChangeScene("stage1");
+                else if (selectCount == 2) gameManager.ChangeScene("stage2");
+                else if (selectCount == 3) gameManager.ChangeScene("stage3");
+                else if (selectCount == 4) gameManager.ChangeScene("stage4");
+                else if (selectCount == 5) gameManager.ChangeScene("stage5");
+                else if (selectCount == 6) gameManager.ChangeScene("stage6");
+                else if (selectCount == 7) gameManager.ChangeScene("stage7");
+                else if (selectCount == 8) gameManager.ChangeScene("stage8");
+
+            }
         }
     }
 

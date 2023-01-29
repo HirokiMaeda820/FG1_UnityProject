@@ -8002,7 +8002,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746454532}
-  m_LocalRotation: {x: 0.04276634, y: 0.22723001, z: -0.033176012, w: 0.97233576}
+  m_LocalRotation: {x: 0.042766336, y: 0.22723001, z: -0.03317601, w: 0.9723359}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9396,7 +9396,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995058407}
-  m_LocalRotation: {x: 0.022645473, y: 0.22741434, z: -0.028407568, w: 0.9731202}
+  m_LocalRotation: {x: 0.022645473, y: 0.22741432, z: -0.028407568, w: 0.9731202}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10429,7 +10429,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111946840}
-  m_LocalRotation: {x: -0.16016696, y: -0.012036984, z: 0.0020829285, w: 0.98701435}
+  m_LocalRotation: {x: -0.16016696, y: -0.012036985, z: 0.0020829288, w: 0.98701435}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25665,9 +25665,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4315268883331583375}
+  - component: {fileID: 4315268883331583376}
   m_Layer: 0
   m_Name: hosi
-  m_TagString: Untagged
+  m_TagString: hosi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25680,7 +25681,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3506398120272910133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.43, y: 11.89, z: -0.32582}
+  m_LocalPosition: {x: 8, y: 11.89, z: -0.32582}
   m_LocalScale: {x: 3.7666, y: 3.7666, z: 3.7666}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25688,6 +25689,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4315268883331583376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506398120272910133}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4551820463077113478
 GameObject:
   m_ObjectHideFlags: 0

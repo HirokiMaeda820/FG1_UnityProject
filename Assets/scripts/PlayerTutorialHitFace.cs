@@ -20,7 +20,7 @@ public class PlayerTutorialHitFace : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Face6")
+        if (other.tag == "hosi")
         {
             hit = true;
         }

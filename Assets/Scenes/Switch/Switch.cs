@@ -7,6 +7,7 @@ public class Switch : MonoBehaviour
     //public GameObject door;//青
     public DoorOpen doorOpen;
 
+ 
     //壁のgameobjectをUnity上でアタッチする
     bool isActive;//true=スイッチ押した
 

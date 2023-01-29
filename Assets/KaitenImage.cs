@@ -6,6 +6,8 @@ public class KaitenImage : MonoBehaviour
 {
     public GameObject kaitenImage;
 
+    public CameraSwitcher cameraSwitcher;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +23,14 @@ public class KaitenImage : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         //Debug.Log(collision.gameObject.name); // ‚Ô‚Â‚©‚Á‚½‘ŠŽè‚Ì–¼‘O‚ðŽæ“¾
+
         if (other.gameObject.tag == "Player")
         {
-            kaitenImage.SetActive(true);
+            if (cameraSwitcher.CameraSwitch() == (int)CameraSwitcher.SwitchName.UP)
+                kaitenImage.SetActive(true);
+            else kaitenImage.SetActive(false);
         }
+
     }
     private void OnTriggerExit(Collider other)
     {
