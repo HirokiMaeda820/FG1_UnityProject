@@ -19,11 +19,19 @@ public class PlayerHitFace : MonoBehaviour
         
     }
 
-    private void OnTriggerStay(Collider other)
+    //private void OnTriggerStay(Collider other)
+    //{
+
+    //    controlMode.SwitchArrow(other.gameObject.tag);//タグいれる
+
+    //    //other.gameObject.name
+    //}
+
+    private void OnCollisionStay(Collision other)
     {
 
         controlMode.SwitchArrow(other.gameObject.tag);//タグいれる
 
-        //other.gameObject.name
+        //other.gameObject.name;
     }
 }
