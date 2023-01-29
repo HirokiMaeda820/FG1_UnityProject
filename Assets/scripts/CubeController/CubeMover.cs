@@ -55,7 +55,7 @@ public class CubeMover : MonoBehaviour
                 {
                     Destroy(root.gameObject);
                     root = null;
-                    player.transform.parent = null; 
+                    player.transform.parent = null;
                     shouldDestroy = false;
                 }
             }
@@ -122,17 +122,20 @@ public class CubeMover : MonoBehaviour
                 t.SetParent(root);
 
             }
-            if (axis == rootCube.up && is90Degree == false && (_orientation == 1 || _orientation == -1))
+            if (axis == rootCube.up && is90Degree == false && isMid == false
+                                     && (_orientation == 1 || _orientation == -1))
             {
                 player.SetParent(root);
             }
+
+
             rotation = axis * _orientation * rotateSpeed;
-           // Debug.Log(rotation);
+            // Debug.Log(rotation);
             isRotate = true;
         }
         else
         {
-            isRotate= false;
+            isRotate = false;
         }
     }
 
@@ -153,7 +156,7 @@ public class CubeMover : MonoBehaviour
         Debug.Log(isMid);
         if (isMid)
         {
-            
+
             for (int i = 0; i < rootCube.childCount; i++)
             {
                 Transform t = rootCube.GetChild(i);
@@ -194,15 +197,15 @@ public class CubeMover : MonoBehaviour
                     if ((!is90Degree) && (cosine > 0.5))
                     {
                         result.Add(t); Debug.Log(cosine);
-                    }                    
+                    }
                     else if (is90Degree && (cosine < 0.0005))
                     {
                         result.Add(t); Debug.Log(cosine);
                     }
-                   
-                    
+
+
                 }
-            }          
+            }
         }
         return result;
     }
@@ -240,7 +243,7 @@ public class CubeMover : MonoBehaviour
                 break;
             case "F_R":
                 moveCubes(-rootCube.forward, false, false, 1);
-                break;       
+                break;
             case "Fc_L":
                 moveCubes(-rootCube.forward, true, false, -1);
                 break;
@@ -310,7 +313,7 @@ public class CubeMover : MonoBehaviour
             case "U_L"://
                 moveCubes(rootCube.up, false, false, 1);
                 break;
-            
+
             case "Uc_R":
                 moveCubes(rootCube.up, true, false, -1);
                 break;
@@ -346,7 +349,7 @@ public class CubeMover : MonoBehaviour
     {
         return isLocked;
     }
-    
+
     public bool GetIsRotate()
     {
         return isRotate;

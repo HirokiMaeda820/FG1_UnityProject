@@ -15,6 +15,8 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject sousaPanel;
     [SerializeField] private GameObject settingPanel;
 
+    [SerializeField] private GameObject stageName;
+
     private int menuNum = 0;//0:無 1:設定 2:操作説明
     private bool isPause = false;
 
@@ -53,7 +55,7 @@ public class Menu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!isPause) audioSource.PlayOneShot(pauseSound);
-            else if(isPause) audioSource.PlayOneShot(backSound);
+            else if (isPause) audioSource.PlayOneShot(backSound);
 
             isPause = !isPause;
         }
@@ -62,7 +64,13 @@ public class Menu : MonoBehaviour
         if (isPause)
         {
             Time.timeScale = 0;  // 時間停止
-            pausePanel.SetActive(true);　　//パネルを出す
+            pausePanel.SetActive(true);  //パネルを出す
+
+            if (stageName != null)
+            {
+                stageName.SetActive(true);  //画像だす
+            }
+
             pauseButton.gameObject.SetActive(false); //ポーズボタンを消す
             if (commander != null)
             {
@@ -94,6 +102,14 @@ public class Menu : MonoBehaviour
         {
             Time.timeScale = 1;
             pausePanel.SetActive(false);
+            if (stageName != null)
+            {
+                if (stageName.GetComponent<destroyStartImage>().GetStartFlag())//スタートしていたら
+                {
+                    stageName.SetActive(false);  //画像だす
+                }
+            }
+
             pauseButton.gameObject.SetActive(true);
             if (commander != null)
             {
