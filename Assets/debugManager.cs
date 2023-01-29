@@ -22,7 +22,7 @@ public class debugManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            isDebug = !isDebug;
+            //isDebug = !isDebug;
         }
 
         if (isDebug)
