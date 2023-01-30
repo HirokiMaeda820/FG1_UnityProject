@@ -12,13 +12,16 @@ public class GameManager : MonoBehaviour
     public Text rotateText;
 
     public GameObject _goal;
+    public GameObject player;
 
     public GameObject TitleBotton;
     public GameObject NextBotton;
     public GameObject ClearImage;
 
-   // public GameObject canvas;
-   // private Menu pause;
+    public bool selectScene = false;
+
+    // public GameObject canvas;
+    // private Menu pause;
 
     private void Start()
     {
@@ -37,6 +40,7 @@ public class GameManager : MonoBehaviour
         if (NextBotton != null) NextBotton.SetActive(false);
         if (ClearImage != null) ClearImage.SetActive(false);
         if (TitleBotton != null) TitleBotton.SetActive(false);
+        if (player != null) player.SetActive(true);
     }
 
     void Update()
@@ -44,7 +48,7 @@ public class GameManager : MonoBehaviour
         //Rキーでリセットする
         if (Input.GetKey(KeyCode.R) && !_goal.GetComponent<Goal>().GetIsGoal())
         {
-            SceneReset();
+            if (!selectScene) SceneReset();
         }
         //ESCとDELETEでタイトル
         if (Input.GetKey(KeyCode.Escape) && Input.GetKey(KeyCode.Delete))
@@ -65,6 +69,7 @@ public class GameManager : MonoBehaviour
             if (NextBotton != null) NextBotton.SetActive(true);
             if (ClearImage != null) ClearImage.SetActive(true);
             if (TitleBotton != null) TitleBotton.SetActive(true);
+            if (player != null) player.SetActive(false);
         }
     }
 

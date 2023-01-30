@@ -30,23 +30,22 @@ public class focusRotate : MonoBehaviour
 
     void Update()
     {
-
-
+       
         //アクティブじゃないときはreturn
         if (!(cameraSwitcher.CameraSwitch() == 1))
         {
-            sideCameraReset = false;
+            //sideCameraReset = false;
             return;
         }
 
         if (menu.GetComponent<Menu>().GetIsPause()) return;
 
-        if (!sideCameraReset)
+        if (sideCameraReset)
         {
             if (!fiveRow) transform.position = new Vector3(0, 0, -60.0f);
             if (fiveRow) transform.position = new Vector3(0, 0, -100.0f);
             transform.rotation = new Quaternion(0, 0, 0, 0);
-            sideCameraReset = true;
+            sideCameraReset = false;
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -99,6 +98,11 @@ public class focusRotate : MonoBehaviour
         rotationSpeed.x = slider.value;
         rotationSpeed.y = slider.value;
         Debug.Log(slider.value);
+    }
+
+    public void ResetCamera()
+    {
+        sideCameraReset = true;
     }
 
 }
